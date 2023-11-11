@@ -1,38 +1,114 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --rich-black: #04080F;
+  --glaucous: #507DBC;
+  --powder-blue: #A1C6EA;
+  --platinum: #DAE3E5;
+  --columbia-blue: #BBD1EA;
+}
+header{
+  width: 500px;
+  margin-left: auto;
+  padding: 0.7rem;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.header-component span{
+  font-family: 'Teko', sans-serif;
+  color: var(--platinum);
+  opacity: 0.6;
+  height: 0.9rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.header-component a, .footer-nav a{
+  color: var(--platinum);
+  text-decoration: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.header-component a::before{
+  content: "//";
+  font-size: 0.8rem;
+  margin-right: 0.3rem;
 }
 
-.App-link {
-  color: #61dafb;
+.theme-change-btn{
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.theme-change-btn img{
+  width: 40px;
+}
+
+.section{
+  width: 50%;
+  height: 800px;
+}
+
+.intro{
+  width: 450px;
+}
+
+.intro>h3{
+  color: var(--platinum);
+  font-weight: 300;
+  font-size: 1.2rem;
+}
+
+.intro>h1{
+  color: var(--glaucous);
+  font-size: 4rem;
+  font-weight: 700;
+  margin-left: -4px;
+}
+
+.intro>h2, .intro>div>h3{
+  color: var(--powder-blue);
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+.intro>div{
+  margin-top: 50px;
+}
+
+.intro>div>h3{
+  opacity: 0.4;
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.resume-btn{
+  text-decoration: none;
+  color: var(--columbia-blue);
+  border: solid 0.1rem var(--columbia-blue);
+  border-radius: 0.3rem;
+  padding: 0.3rem 0.5rem 0.5rem 0.5rem;
+  margin-left: 1rem;
+  cursor: pointer;
+}
+
+footer{
+  margin: auto;
+  width: 800px;
+}
+
+footer > *{
+  margin-top: 1rem;
+}
+
+.footer-nav{
+  font-size: 15px;
+  padding: 1rem 8rem;
+  border-top: 0.13rem solid rgba(255, 255, 255, 0.3);
+  border-bottom: 0.13rem solid rgba(255, 255, 255, 0.3);
+}
+
+.socials > *{
+  margin: 0 0.4rem;
+  cursor: pointer;
+}
+
+.footer-c{
+  color: var(--platinum);
+  opacity: 0.2;
 }
