@@ -43,11 +43,12 @@ header{
 
 .section{
   width: 50%;
-  height: 800px;
+  height: 850px;
 }
 
-.intro, .about{
+.intro, .section>div{
   width: 550px;
+  color: var(--platinum);
 }
 
 .intro>h3{
@@ -63,10 +64,10 @@ header{
   margin-left: -4px;
 }
 
-.intro>h2, .intro>div>h3{
-  color: var(--powder-blue);
-  font-size: 1.5rem;
-  font-weight: 400;
+.intro>h2 {
+  color: var(--powder-blue) !important;
+  font-size: 1.8rem !important;
+  font-weight: 400 !important;
 }
 
 .intro>div{
@@ -74,6 +75,8 @@ header{
 }
 
 .intro>div>h3{
+  color: var(--powder-blue);
+  font-weight: 400;
   opacity: 0.4;
   margin: 0;
   font-size: 1.2rem;
@@ -89,10 +92,6 @@ header{
   cursor: pointer;
 }
 
-.about{
-  color: var(--platinum);
-}
-
 .section-heading{
   opacity: 0.4;
   font-size: 0.8rem;
@@ -100,7 +99,7 @@ header{
   user-select: none;
 }
 
-.about>h2{
+.section>div>h2{
   color: var(--glaucous);
   font-size: 2rem;
   font-weight: 700;
@@ -136,8 +135,26 @@ header{
 .highlighted-text{
   width: 100%;
   background-color: var(--black-blue);
-  padding: 30px;
+  padding: 40px;
   margin-top: 60px;
+}
+
+.f-container{
+  margin-top: 80px;
+}
+
+.frameworks>div{
+  margin: 1rem 0.3rem;
+}
+
+.frameworks>div>img{
+  width: 40px;
+  height: 40px;
+}
+
+.frameworks>div>label{
+  font-size: 0.9rem;
+  color: var(--columbia-blue);
 }
 
 footer{
@@ -150,10 +167,13 @@ footer > *{
 }
 
 .footer-nav{
-  font-size: 15px;
   padding: 1rem 8rem;
   border-top: 0.13rem solid rgba(255, 255, 255, 0.3);
   border-bottom: 0.13rem solid rgba(255, 255, 255, 0.3);
+}
+
+.footer-nav>a{
+  font-size: 0.85rem;
 }
 
 .socials > *{
@@ -164,4 +184,5 @@ footer > *{
 .footer-c{
   color: var(--platinum);
   opacity: 0.2;
+  font-size: 0.7rem;
 }
