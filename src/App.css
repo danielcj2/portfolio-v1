@@ -7,6 +7,8 @@
   --platinum: #DAE3E5;
   --columbia-blue: #BBD1EA;
   --black-blue: #0D1320;
+  --light-red: #FF6B6B;
+  --naples-yellow: #FFE66D;
 }
 
 header{
@@ -157,6 +159,44 @@ header{
   color: var(--columbia-blue);
 }
 
+.tech-name{
+  text-transform: capitalize;
+}
+
+.contact>label{
+  margin-top: 2rem;
+  font-size: 0.8rem;
+  color: var(--platinum);
+  opacity: 0.4;
+}
+
+.contact>input, textarea{
+  color: var(--platinum);
+  background-color: var(--rich-black);
+  border: solid 0.1rem var(--black-blue);
+  border-radius: 0.3rem;
+  padding: 0.5rem;
+  font-size: 0.9rem;
+  resize: none;
+}
+
+.contact>input:focus, textarea:focus{
+  outline: solid 0.15rem var(--light-red);
+}
+
+.send-btn{
+  background-color: var(--columbia-blue);
+  border-radius: 0.2rem;
+  margin-top: 2rem;
+  font-weight: 500;
+}
+
+.send-btn:hover{
+  background-color: var(--rich-black);
+  border-color: var(--columbia-blue);
+  color: var(--columbia-blue);
+}
+
 footer{
   margin: auto;
   width: 800px;
@@ -168,8 +208,8 @@ footer > *{
 
 .footer-nav{
   padding: 1rem 8rem;
-  border-top: 0.13rem solid rgba(255, 255, 255, 0.3);
-  border-bottom: 0.13rem solid rgba(255, 255, 255, 0.3);
+  border-top: 0.1rem solid rgba(255, 255, 255, 0.1);
+  border-bottom: 0.1rem solid rgba(255, 255, 255, 0.1);
 }
 
 .footer-nav>a{

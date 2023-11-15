@@ -12,6 +12,49 @@ import Csharp from "../svg/csharp.svg";
 
 
 const Expertise = () => {
+  const techItems=[
+    {
+        name: 'javascript',
+        icon: JavaScript,
+    },
+    {
+        name: 'html',
+        icon: Html,
+    },
+    {
+        name: 'css',
+        icon: Css,
+    },
+    {
+        name: 'php',
+        icon: Php,
+    },
+    {
+        name: 'sql',
+        icon: Sql,
+    },
+    {
+        name: 'react',
+        icon: ReactSvg,
+    },
+    {
+        name: 'bootstrap',
+        icon: Bootstrap,
+    },
+    {
+        name: 'jquery',
+        icon: Jquery,
+    },
+    {
+        name: 'figma',
+        icon: Figma,
+    },
+    {
+        name: 'c#',
+        icon: Csharp,
+    }
+  ]
+  
   return (
     <div className="section d-flex justify-content-around align-items-center">
         <div className="expertise text-center">
@@ -21,46 +64,7 @@ const Expertise = () => {
             <div className="f-container">
                 <p>SOME TECHNOLOGIES I'VE WORKED WITH:</p>
                 <div className="frameworks row justify-content-center">
-                    <div className="col-2">
-                        <img id="javascript" src={JavaScript} alt="Javascript Icon" />
-                        <label className="row justify-content-center" htmlFor="javascript">Javascript</label>
-                    </div>
-                    <div className="col-2">
-                        <img id="html" src={Html} alt="Html Icon" />
-                        <label className="row justify-content-center" htmlFor="html">HTML5</label>
-                    </div>
-                    <div className="col-2">
-                        <img id="css" src={Css} alt="Css Icon" />
-                        <label className="row justify-content-center" htmlFor="css">CSS</label>
-                    </div>
-                    <div className="col-2">
-                        <img id="php" src={Php} alt="Php Icon" />
-                        <label className="row justify-content-center" htmlFor="php">PHP</label>
-                    </div>
-                    <div className="col-2">
-                        <img id="sql" src={Sql} alt="Sql Icon" />
-                        <label className="row justify-content-center" htmlFor="sql">SQL</label>
-                    </div>
-                    <div className="col-2">
-                        <img id="react" src={ReactSvg} alt="React Icon" />
-                        <label className="row justify-content-center" htmlFor="react">React</label>
-                    </div>
-                    <div className="col-2">
-                        <img id="bootstrap" src={Bootstrap} alt="Bootstrap Icon" />
-                        <label className="row justify-content-center" htmlFor="bootstrap">Bootstrap</label>
-                    </div>
-                    <div className="col-2">
-                        <img id="jquery" src={Jquery} alt="Jquery Icon" />
-                        <label className="row justify-content-center" htmlFor="jquery">jQuery</label>
-                    </div>
-                    <div className="col-2">
-                        <img id="figma" src={Figma} alt="Figma Icon" />
-                        <label className="row justify-content-center" htmlFor="figma">Figma</label>
-                    </div>
-                    <div className="col-2">
-                        <img id="csharp" src={Csharp} alt="C# Icon" />
-                        <label className="row justify-content-center" htmlFor="csharp">C#</label>
-                    </div>
+                    {techItems.map((item, index) => (<div className="col-2"><img id={index} src={item.icon} alt={item.name + " icon"} /><label className="tech-name row justify-content-center" htmlFor={index}>{item.name}</label></div>))}
                 </div>
             </div>
         </div>
