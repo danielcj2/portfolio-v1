@@ -8,7 +8,7 @@ import Bootstrap from "../svg/bootstrap.svg";
 import Jquery from "../svg/jquery.svg";
 import Figma from "../svg/figma.svg";
 import Csharp from "../svg/csharp.svg";
-
+import SectionHeading from "./SectionHeading";
 
 
 const Expertise = () => {
@@ -58,8 +58,7 @@ const Expertise = () => {
   return (
     <div className="section d-flex justify-content-around align-items-center">
         <div className="expertise text-center">
-            <div className="section-heading">Expertise</div>
-            <h2 className="section-title">Skills & Competencies</h2>
+            <SectionHeading head="Expertise" title="Skills & Competencies" />
             <p>I've been doing web development for a little while now, and I'm continuously eager to learn more in this ever growing fast paced industry.</p>
             <div className="f-container">
                 <p>SOME TECHNOLOGIES I'VE WORKED WITH:</p>
