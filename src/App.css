@@ -303,7 +303,7 @@ header{
 
 .send-btn::after{
   content: "";
-  background-color: var(--rich-black);
+  background-color: rgba(13,19,32,1);
   position: absolute;
   z-index: -1;
   display: block;
@@ -324,6 +324,11 @@ header{
 .send-btn:hover::after{
   transition: all 0.5s ease-out;
   transform: skewX(-45deg) scale(1, 1);
+}
+
+.send-btn:active{
+  transform-origin: 100% 50%;
+  transform: scale(105%);
 }
 
 .pattern{
