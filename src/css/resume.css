@@ -1,0 +1,260 @@
+
+:root{
+  --indigo-dye: #034078;
+  --cerulean: #1282a2;
+  --white: #fefcfb;
+  --azure: #F2FDFF;
+  --alice-blue: #DBE9EE;
+  --raisin-black: #161925;
+  --indent: 4rem;
+}
+
+.resume>*, .resume svg{
+  color: var(--rich-black);
+}
+
+main{
+  position: relative;
+  max-width: unset;
+  padding: var(--indent);
+  background-color: var(--alice-blue);
+  box-shadow: 0 0 20px rgba(219, 233, 238, 0.3);
+  overflow: hidden;
+}
+
+aside{
+  position:absolute;
+  top: calc(var(--indent) / 4);
+  right: calc(var(--indent) / 2);
+}
+
+main aside~div>section:last-child{
+  height: 100%;
+}
+
+.resume svg{
+  width: 25px;
+  height: 25px;
+  margin-right: 7px;
+  background-color: var(--alice-blue);
+  padding: 0.15rem;
+  border-radius: 50%;
+}
+
+aside svg{
+  width: 25px;
+  height: 25px;
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
+}
+
+.resume-pdf{
+  text-decoration: none;
+  color: var(--rich-black);
+  font-size: 1.1rem;
+  font-weight: 400;
+}
+
+div>section:first-child{
+  background-color: var(--rich-black);
+  color: var(--white);
+  margin-top: calc(var(--indent) * -1);
+  padding: var(--indent);
+  padding-bottom: calc(var(--indent) / 2);
+  min-width: 400px;
+}
+
+section, .resume h2{
+  background-color: var(--azure);
+  margin-left: calc(var(--indent) * -1);
+  padding: var(--indent);
+  padding-top: calc(var(--indent) / 2);
+}
+
+div>section:last-child{
+  margin-bottom: calc(var(--indent) * -1);
+}
+
+.name{
+  font-weight: 700;
+  letter-spacing: 1px;
+  font-size: 2.6rem;
+  line-height: 2.5rem;
+}
+
+.contact-info{
+  padding: 0;
+  margin-top: 2rem;
+}
+
+.contact-item, .skill{
+  list-style: none;
+  color: var(--azure);
+  line-height: 2rem;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+}
+
+.resume h5, h2, h4{
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  margin-bottom: 0.7rem;
+}
+
+p{
+  margin: 0;
+}
+
+.resume a:not(.resume-pdf){
+  position: relative;
+  text-decoration: none;
+  color: var(--indigo-dye);
+  font-weight: 500;
+  font-style: italic;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.resume a:not(.resume-pdf)::after{
+  content: "";
+  background-color: var(--cerulean);
+  height: 0.4rem;
+  width: 110%;
+  display: block;
+  position: absolute;
+  z-index: -1;
+  margin-top: -0.4rem;
+  margin-left: -5%;
+  transition: all 0.3s;
+}
+
+.resume a:hover{
+  color: var(--rich-black);
+}
+
+.resume a:not(.resume-pdf):hover::after{
+  transform: scaleY(0.7);
+  transform-origin: bottom;
+}
+
+.resume a ~ p:not(.project-description){
+  color: var(--glaucous);
+  font-weight: 400;
+  font-style: italic;
+  opacity: 0.9;
+  font-size: 0.9rem;
+}
+
+.skills{
+  padding: 0 1rem 1rem 1rem;
+}
+
+.skill{
+  color: var(--indigo-dye);
+  font-weight: 500;
+  line-height: 1.3rem;
+  list-style: square;
+}
+
+.right-side{
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.resume h4, .right-side>p{
+  padding-left: var(--indent);
+}
+
+.resume h4{
+  background-color: var(--alice-blue);
+  padding-top: calc(var(--indent) / 2);
+  margin-bottom: 0;
+}
+
+.resume h2{
+  background-color: var(--indigo-dye);
+  color: var(--alice-blue);
+  letter-spacing: 5px;
+  padding-bottom: calc(var(--indent) / 2);
+  margin-bottom: 0;
+}
+
+.project-container{
+  background-color: var(--alice-blue);
+  padding: calc(var(--indent) / 4) var(--indent);
+}
+
+.project-container>*{
+  line-height: 1.7rem;
+}
+
+.project-heading>.bold{
+  font-size: 1.1rem;
+  color: var(--indigo-dye);
+}
+
+.bold{
+  font-weight: 500;
+}
+
+.project-contributions{
+  list-style-type: "—  ";
+  padding-left: calc(var(--indent) / 4);
+  margin-top: 0.5rem;
+}
+
+.project-description{
+  margin-top: 0.5rem;
+}
+
+@media (min-width: 1200px){
+  main{
+    margin: var(--indent);
+  }
+}
+
+@media (max-width: 1200px)
+{
+  :root{
+    --indent: 2rem;
+  } 
+
+  article, .name{
+    margin-top: 1rem;
+  }
+}
+
+@media (max-width: 600px)
+{
+  .resume{
+    flex-direction: column;
+    padding-right: 0;
+  }
+
+  div>section:first-child{
+    min-width: 0;
+  }
+
+  article>section>h4, .project-container{
+    padding-left: 0 !important;
+  }
+
+  .resume-pdf{
+    color: var(--alice-blue);
+  }
+
+  aside:hover ~ .resume-pdf{
+    color: var(--alice-blue);
+  }
+}
+
+@media (min-width:640px) and (max-width:1080px) {
+  .resume h3{
+    width: 80%;
+  }
+}
+
+
