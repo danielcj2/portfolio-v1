@@ -1,13 +1,14 @@
-import darkThemeSVG from "../svg/dark-theme.svg"
+import { IoSunny } from "react-icons/io5";
 
 const Header = () => {
   return (
-    <header className="text-end d-flex flex-nowrap justify-content-between align-items-center">
-      <div className="header-component d-flex flex-column"><span>01</span><a href="_blank">about</a></div>
-      <div className="header-component d-flex flex-column"><span>02</span><a href="_blank">expertise</a></div>
-      <div className="header-component d-flex flex-column"><span>03</span><a href="_blank">projects</a></div>
-      <div className="header-component d-flex flex-column"><span>04</span><a href="_blank">contact</a></div>
-      <div className="header-component d-flex flex-column"><div className="theme-change-btn"><img src={darkThemeSVG} alt="dark theme button icon" /></div></div>
+    <header className="text-end d-flex flex-nowrap justify-content-end align-items-center">
+      <div className="header-component d-flex align-items-end"><a href="/#about">about</a></div>
+      <div className="header-component d-flex align-items-end"><a href="/#expertise">expertise</a></div>
+      <div className="header-component d-flex align-items-end"><a href="/#projects">projects</a></div>
+      <div className="header-component d-flex align-items-end"><a href="/#contact">contact</a></div>
+      <div className="header-component d-flex align-items-end"><div className="theme-change-btn"><IoSunny />
+</div></div>
     </header>
   )
 }

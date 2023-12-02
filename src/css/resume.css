@@ -107,7 +107,6 @@ p{
 
 .resume a:not(.resume-pdf){
   position: relative;
-  text-decoration: none;
   color: var(--indigo-dye);
   font-weight: 500;
   font-style: italic;
@@ -118,7 +117,7 @@ p{
 .resume a:not(.resume-pdf)::after{
   content: "";
   background-color: var(--cerulean);
-  height: 0.4rem;
+  height: 0.2rem;
   width: 110%;
   display: block;
   position: absolute;
