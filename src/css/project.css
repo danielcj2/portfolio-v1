@@ -1,5 +1,5 @@
 .project{
-  padding-top: var(--indent);
+  padding-top: calc(var(--indent) * 2) !important;
   transition: padding 1s ease;
 }
 

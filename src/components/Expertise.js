@@ -56,7 +56,7 @@ const Expertise = () => {
   ]
   
   return (
-    <div className="section d-flex justify-content-around align-items-center">
+    <div className="section d-flex flex-column justify-content-center">
         <div className="expertise text-center">
             <SectionHeading head="Expertise" title="Skills & Competencies" />
             <p>I've been doing web development for a little while now, and I'm continuously eager to learn more in this ever growing fast paced industry.</p>

@@ -2,7 +2,7 @@ import SectionHeading from "./SectionHeading";
 
 const About = () => {
   return (
-    <div className="section d-flex justify-content-around align-items-center">
+    <div className="section d-flex flex-column justify-content-center">
       <div className="about text-center">
         <SectionHeading head="About" title="Who Am I?"/>
         <p>Hello! My name is Daniel and I enjoy building frontend applications. I have recently graduated from <a href="_blank">Trent University</a> with a degree in Computer Science.</p>

@@ -42,7 +42,7 @@ const Project = () => {
       <Header />
       <main className="project">
         <div className="section__ project-details mx-auto d-flex flex-column justify-content-end">
-          <div className="">
+          <div>
             <Link className="d-flex align-items-center"><FaArrowLeftLong />Back to projects</Link>
             <h3>Project</h3>
             <h1>{projectList[0].name}</h1>
