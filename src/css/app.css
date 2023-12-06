@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Life+Savers:wght@400;700&display=swap');
 
 :root {
   --rich-black: #04080F;
@@ -66,8 +67,12 @@ header{
 }
 
 .header-component a, .footer-nav a{
-  color: var(--platinum);
   transition: all ease 0.3s;
+  cursor: pointer;
+}
+
+.header-component a{
+  color: var(--platinum) !important; 
 }
 
 .header-component a:hover{
@@ -76,6 +81,53 @@ header{
 
 .header-component:has(.theme-change-btn){
   padding: 0;
+}
+
+.header-component:first-child{
+  position: absolute;
+  left: 0;
+}
+
+.star{
+  font-family: 'Life Savers', serif;
+  text-transform: lowercase;
+  text-shadow: var(--columbia-blue) 1px 0 20px;
+  font-size: 1.5rem;
+  background: var(--rich-black);
+  width: 50px;
+  height: 50px;
+  position: relative;
+  outline: solid 2px var(--glaucous);
+  outline-offset: -2px;
+}
+
+.star:before{
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  height: 50px;
+  width: 50px;
+  background: var(--glaucous);
+  transform: rotate(45deg);
+  transform-origin: 50% 50%;
+  outline: dashed 2px var(--indigo-dye);
+  outline-offset: 2px;
+  transition: transform 0.7s ease;
+}
+
+.star:hover:before{
+  transform: scale(50%);
+}
+
+.header-component:has(.star) a:hover{
+  opacity: 1 !important;
+  color: var(--platinum);
+}
+
+.header-component a.active{
+  background-color: red;
 }
 
 .theme-change-btn{
@@ -182,7 +234,7 @@ a{
   transition: all .35s;
 }
 
-.resume-btn::before, .resume-btn::after, .contact-btn::before, .contact-btn::after{
+.curtain::before, .curtain::after{
   position: absolute;
   content: "";
   width: 100%;
@@ -194,20 +246,20 @@ a{
   transition: all .35s;
 }
 
-.resume-btn::before, .contact-btn::before{
+.curtain::before{
   opacity: 0.5;
 }
 
-.resume-btn::after, .contact-btn::after{
+.curtain::after{
   transition-delay: 0.2s;
 }
 
-.resume-btn:hover, .contact-btn:hover{
+.curtain:hover{
   color: var(--rich-black);
   font-weight: 500;
 }
 
-.resume-btn:hover::before, .resume-btn:hover::after, .contact-btn:hover::before, .contact-btn:hover::after{
+.curtain:hover::before, .curtain:hover::after{
   top: 0;
 }
 

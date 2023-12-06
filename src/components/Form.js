@@ -42,13 +42,13 @@ const Form = ({blur, focus}) => {
   
     return (
         <form ref={form} onSubmit={sendEmail} className="d-flex flex-column">
-            <label>NAME</label>
+            <label htmlFor="name-textbox">NAME</label>
             <input type="text" id="name-textbox" name="user_name" autoComplete="off" value={values.user_name} onChange={handleChange} onBlur={handleFocus} focused={focused.user_name.toString()} required />
             <span className="inputSpan text-left align-items-center"><BsExclamationCircle />Name cannot be empty</span>
-            <label>EMAIL</label>
+            <label htmlFor="email-textbox">EMAIL</label>
             <input type="email" id="email-textbox" name="user_email" autoComplete="off" value={values.user_email} onChange={handleChange} onBlur={handleFocus} focused={focused.user_email.toString()} required />
             <span className="inputSpan text-left align-items-center"><BsExclamationCircle />Invalid email</span>
-            <label>MESSAGE</label>
+            <label htmlFor="message-textbox">MESSAGE</label>
             <textarea id="message-textbox" name="message" rows="5" value={values.message} onChange={handleChange} onBlur={handleFocus} focused={focused.message.toString()} required ></textarea>
             <span className="txtSpan text-left align-items-center"><BsExclamationCircle />Message cannot be empty</span>
             <div className="d-flex justify-content-end">

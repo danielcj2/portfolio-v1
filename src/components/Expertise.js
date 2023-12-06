@@ -57,13 +57,13 @@ const Expertise = () => {
   
   return (
     <div className="section d-flex flex-column justify-content-center">
-        <div className="expertise text-center">
+        <div className="expertise text-center" id="expertise">
             <SectionHeading head="Expertise" title="Skills & Competencies" />
             <p>I've been doing web development for a little while now, and I'm continuously eager to learn more in this ever growing fast paced industry.</p>
             <div className="f-container">
                 <p>SOME TECHNOLOGIES I'VE WORKED WITH:</p>
                 <div className="frameworks row justify-content-center">
-                    {techItems.map((item, index) => (<div className="col-2"><img id={index} src={item.icon} alt={item.name + " icon"} /><label className="tech-name row justify-content-center" htmlFor={index}>{item.name}</label></div>))}
+                    {techItems.map((item, index) => (<div className="col-2" key={index}><img src={item.icon} alt={item.name + " icon"} /><label className="tech-name row justify-content-center">{item.name}</label></div>))}
                 </div>
             </div>
         </div>

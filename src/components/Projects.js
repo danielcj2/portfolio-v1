@@ -8,7 +8,7 @@ const Projects = () => {
     <>
       <button className="resume-break"><ImCloudDownload className="react-icon"/></button>
       <div className="section center d-flex flex-column justify-content-center">
-        <div className="projects text-center">
+        <div className="projects text-center" id="projects">
           {/* <div className="gradient__wrapper d-flex justify-content-around">
             <div className="gradient">
               <div className="gradient__inner"></div>

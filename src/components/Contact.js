@@ -5,7 +5,7 @@ const Contact = () => {
   return (
     <div className="pattern">
       <div className="section d-flex flex-column justify-content-center">
-        <div className="contact text-center">
+        <div className="contact text-center" id="contact">
             <SectionHeading head="Contact" title="Get In Touch" />
             <Form />
         </div>
