@@ -1,5 +1,5 @@
 import Slider from "react-slick";
-import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 import { useRef } from "react";
 import { MdOutlineKeyboardArrowRight, MdOutlineKeyboardArrowLeft } from "react-icons/md";
 import guessdleImg from "../img/guessdle.jpg";
@@ -53,21 +53,21 @@ const SliderComponent = () => {
       id: 1,
       name: 'Guessdle',
       description: '',
-      path: '/',
+      path: '/projects/guessdle#',
       background: guessdleImg,
     }, 
     {
       id: 2,
       name: 'Movie Ranker',
       description: '',
-      path: '/',
+      path: '/projects/movie_ranker#',
       background: movie_rankerImg,
     }, 
     {
       id: 3,
       name: 'Portfolio',
       description: '',
-      path: '/',
+      path: '/projects/portfolio#',
       background: portfolioImg,
     }
   ]
@@ -77,7 +77,7 @@ const SliderComponent = () => {
   return (
     <div className="container">
       <Slider ref={arrowRef} {...settings}>
-        {projectList.map((project) => (<div className="wrapper" key={project.id}><Link to={project.path}><img src={project.background} alt="Project cover" /><h5 className="project-title text-start">{project.name}</h5><div className="description">{project.description}</div></Link></div>))}{projectList.map((project) => (<div className="wrapper" key={project.id}><Link to={project.path}><img src={project.background} alt="Project cover" /><h5 className="project-title text-start">{project.name}</h5><div className="description">{project.description}</div></Link></div>))}
+        {projectList.map((project) => (<div className="wrapper" key={project.id}><HashLink to={project.path}><img src={project.background} alt="Project cover" /><h5 className="project-title text-start">{project.name}</h5><div className="description">{project.description}</div></HashLink></div>))}{projectList.map((project) => (<div className="wrapper" key={project.id}><HashLink to={project.path}><img src={project.background} alt="Project cover" /><h5 className="project-title text-start">{project.name}</h5><div className="description">{project.description}</div></HashLink></div>))}
       </Slider>
       <button className="btn-left" onClick={() =>arrowRef.current.slickPrev()}><MdOutlineKeyboardArrowLeft/></button>
       <button className="btn-right" onClick={() =>arrowRef.current.slickNext()}><MdOutlineKeyboardArrowRight/></button>
