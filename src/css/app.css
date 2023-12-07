@@ -219,7 +219,7 @@ a{
   text-decoration: none;
 }
 
-.resume-btn, .contact-btn{
+.resume-btn, .contact-btn, .home-btn{
   display: inline-block;
   width: 90px;
   color: var(--columbia-blue);
