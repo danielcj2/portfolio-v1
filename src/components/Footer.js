@@ -10,7 +10,7 @@ const Footer = () => {
   return (
     <footer className="text-center d-flex flex-column justify-content-center">
       <hr/>
-      <div className="footer-nav d-flex align-self-center justify-content-around">
+      <div className="footer-nav d-flex flex-wrap justify-content-center align-self-center">
         <HashLink to="/#">HOME</HashLink>
         <HashLink to="/#about" scroll={scrollWidthOffset}>ABOUT</HashLink>
         <HashLink to="/#expertise" scroll={scrollWidthOffset}>EXPERTISE</HashLink>

@@ -3,12 +3,12 @@ import { FaPhoneAlt } from "react-icons/fa";
 import { IoIosMail } from "react-icons/io";
 import { FaGithub } from "react-icons/fa";
 import { MdSimCardDownload } from "react-icons/md";
-
+import resumePDF from "../documents/resume.pdf"
 
 const Resume = () => {
   return (
     <main className="resume d-flex">
-      <aside><a className="resume-pdf" href="resume pdf link"><MdSimCardDownload className="svg-dl"/>Grab a Copy</a></aside>
+      <aside><a className="resume-pdf d-flex align-items-center" href={resumePDF} target="_blank" rel="noopener noreferrer" download="resume.pdf"><MdSimCardDownload className="svg-dl"/>Grab a Copy</a></aside>
       <div>
         <section>
           <h1 className="name">Daniel Cojocea</h1>
@@ -22,7 +22,7 @@ const Resume = () => {
         <section>
           <h5>education</h5>
           <p>Bachelor of Science(Honours) in Computer Science</p>
-          <a href="/" className="uni">Trent University, Peterborough, ON</a>
+          <a href="https://www.trentu.ca/" target="_blank" rel="noopener noreferrer" className="uni">Trent University, Peterborough, ON</a>
           <p>Sept 2018 - April 2022</p>
         </section>
         <section>
@@ -50,7 +50,7 @@ const Resume = () => {
             <div className="project-heading">
               <span className="bold">Movie Ranker</span> - Personal Project
             </div>
-            <a className="project-source" href="source link">github.com/danielcj2/movie-ranker-js</a>
+            <a className="project-source" href="https://www.github.com/danielcj2/movie-ranker-js" target="_blank" rel="noopener noreferrer">github.com/danielcj2/movie-ranker-js</a>
             <p className="project-description"><span className="bold">Description:</span> Developed a movie ranker web applicatino that engages movie enthusiasts in an interactive movie showdown experience. The project revolves around a 1v1-style movie comparison, where users have the power to influence movie rankings through their choices.</p>
             <ul className="project-contributions">
               <li>Designed and implemented an algorithm that allows users to select a set of rounds.</li>
@@ -63,7 +63,7 @@ const Resume = () => {
             <div className="project-heading">
               <span className="bold">Software Engineering</span> - Uni Project
             </div>
-            <a className="project-source" href="source link">Trent University, Peterborough, ON</a>
+            <a className="project-source" href="https://www.trentu.ca/" target="_blank" rel="noopener noreferrer">Trent University, Peterborough, ON</a>
             <ul className="project-contributions">
               <li>Was part of a team of four that worked hand in hadn i nthe planning, design, development, and execution of the project presented by the client.</li>
               <li>Built the user interface from scratch to reflect the Trent University theme.</li>
@@ -76,7 +76,7 @@ const Resume = () => {
             <div className="project-heading">
               <span className="bold">React Guessing Game</span> - Personal Project
             </div>
-            <a className="project-source" href="source link">github.com/danielcj2/vsidle-game</a>
+            <a className="project-source" href="https://www.github.com/danielcj2/vsidle-game" target="_blank" rel="noopener noreferrer">github.com/danielcj2/vsidle-game</a>
             <p className="project-description"><span className="bold">Description:</span> Developed a dynamic and interactive web-based guessing game in React, drawing inspiration from the popular web game Wordle. The game offers multiple categories for players to choose from and provides them with a series of hints to guess the correct answer.</p>
             <ul className="project-contributions">
               <li>Leveraged the power of React to build a robust and responsive user interface ensuring smooth interactions and efficient data handling.</li>

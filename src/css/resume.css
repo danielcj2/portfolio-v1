@@ -1,12 +1,4 @@
 
-:root{
-  --indigo-dye: #034078;
-  --cerulean: #1282a2;
-  --azure: #F2FDFF;
-  --alice-blue: #DBE9EE;
-  --indent: 4rem;
-}
-
 .resume>*, .resume svg{
   color: var(--rich-black);
 }
@@ -18,6 +10,7 @@
   background-color: var(--alice-blue);
   box-shadow: 0 0 20px rgba(219, 233, 238, 0.3);
   overflow: hidden;
+  transition: all 0.7s ease;
 }
 
 aside{
@@ -51,7 +44,20 @@ aside svg{
   text-decoration: none;
   color: var(--rich-black);
   font-size: 1.1rem;
-  font-weight: 400;
+  font-weight: 500;
+  transition: transform 0.3s linear;
+  backface-visibility: hidden;
+}
+
+.resume-pdf>svg{
+  background-color: var(--rich-black);
+  color: var(--platinum);
+  width: 30px;
+  height: 30px;
+}
+
+.resume-pdf:hover{
+  transform: scale(1.048);
 }
 
 div>section:first-child{
@@ -115,11 +121,11 @@ p{
 }
 
 .resume a:not(.resume-pdf)::after{
+  display: block;
   content: "";
   background-color: var(--cerulean);
-  height: 0.2rem;
+  height: 0.3rem;
   width: 110%;
-  display: block;
   position: absolute;
   z-index: -1;
   margin-top: -0.4rem;
@@ -215,16 +221,12 @@ p{
 
 @media (max-width: 1200px)
 {
-  :root{
-    --indent: 2rem;
-  } 
-
   article, .name{
     margin-top: 1rem;
   }
 }
 
-@media (max-width: 600px)
+@media (max-width: 750px)
 {
   .resume{
     flex-direction: column;
