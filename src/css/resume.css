@@ -92,7 +92,7 @@ div>section:last-child{
   margin-top: 2rem;
 }
 
-.contact-item, .skill{
+.contact-item, .resume-skill{
   list-style: none;
   color: var(--azure);
   line-height: 2rem;
@@ -150,11 +150,11 @@ p{
   font-size: 0.9rem;
 }
 
-.skills{
+.resume-skills{
   padding: 0 1rem 1rem 1rem;
 }
 
-.skill{
+.resume-skill{
   color: var(--indigo-dye);
   font-weight: 500;
   line-height: 1.3rem;

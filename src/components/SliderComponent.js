@@ -75,9 +75,9 @@ const SliderComponent = () => {
   const arrowRef= useRef(null);
 
   return (
-    <div className="container">
+    <div className="slider-container mx-auto">
       <Slider ref={arrowRef} {...settings}>
-        {projectList.map((project) => (<div className="wrapper" key={project.id}><HashLink to={project.path}><img src={project.background} alt="Project cover" /><h5 className="project-title text-start">{project.name}</h5><div className="description">{project.description}</div></HashLink></div>))}{projectList.map((project) => (<div className="wrapper" key={project.id}><HashLink to={project.path}><img src={project.background} alt="Project cover" /><h5 className="project-title text-start">{project.name}</h5><div className="description">{project.description}</div></HashLink></div>))}
+        {projectList.map((project) => (<div className="project-wrapper" key={project.id}><HashLink to={project.path}><img src={project.background} alt="Project cover" /><h5 className="project-title text-start">{project.name}</h5><div className="description">{project.description}</div></HashLink></div>))}{projectList.map((project) => (<div className="project-wrapper" key={project.id}><HashLink to={project.path}><img src={project.background} alt="Project cover" /><h5 className="project-title text-start">{project.name}</h5><div className="description">{project.description}</div></HashLink></div>))}
       </Slider>
       <button className="btn-left" onClick={() =>arrowRef.current.slickPrev()}><MdOutlineKeyboardArrowLeft/></button>
       <button className="btn-right" onClick={() =>arrowRef.current.slickNext()}><MdOutlineKeyboardArrowRight/></button>

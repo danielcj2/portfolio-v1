@@ -27,18 +27,18 @@ const Resume = () => {
         </section>
         <section>
           <h5>competencies</h5>
-          <ul className="skills">
-            <li className="skill">React</li>
-            <li className="skill">HTML</li>
-            <li className="skill">CSS</li>
-            <li className="skill">Javascript</li>
-            <li className="skill">PHP</li>
-            <li className="skill">SQL</li>
-            <li className="skill">jQuery</li>
-            <li className="skill">Bootstrap</li>
-            <li className="skill">C#</li>
-            <li className="skill">Java</li>
-            <li className="skill">Figma</li>
+          <ul className="resume-skills">
+            <li className="resume-skill">React</li>
+            <li className="resume-skill">HTML</li>
+            <li className="resume-skill">CSS</li>
+            <li className="resume-skill">Javascript</li>
+            <li className="resume-skill">PHP</li>
+            <li className="resume-skill">SQL</li>
+            <li className="resume-skill">jQuery</li>
+            <li className="resume-skill">Bootstrap</li>
+            <li className="resume-skill">C#</li>
+            <li className="resume-skill">Java</li>
+            <li className="resume-skill">Figma</li>
           </ul>
         </section>
       </div>

@@ -129,7 +129,7 @@ header{
 }
 
 .star:hover:before{
-  transform: scale(50%);
+  transform: scale(0.5);
 }
 
 .header-component:has(.star) a:hover{
@@ -164,7 +164,7 @@ header{
 
 .theme-change-btn:hover svg{
   color: var(--orange);
-  transform: rotate(90deg) scale(520%);
+  transform: rotate(90deg) scale(5.2);
 }
 
 .section{
@@ -185,7 +185,7 @@ header{
 }
 
 .section>div{
-  max-width: 550px;
+  max-width: 575px;
   color: var(--platinum);
 }
 
@@ -294,7 +294,7 @@ a{
 .react-icon{
   display: none;
   font-size: 1.5rem;
-  transform: scale(200%);
+  transform: scale(2);
   overflow: hidden;
 }
 
@@ -319,7 +319,7 @@ a{
 }
 
 .resume-btn:active, .contact-btn:active{
-  transform: scale(105%);
+  transform: scale(1.05);
 }
 
 .section-heading{
@@ -370,7 +370,7 @@ a{
   width: 100%;
   height: 0.2rem;
   background-color: var(--cerulean);
-  transform: translate3d(-100%, 0, 0);
+  transform: translate3d(-101%, 0, 0);
   transition:  transform 0.3s linear;
 }
 
@@ -386,11 +386,8 @@ a{
   display: inline-block;
   position: relative;
   width: 100%;
-  background-color: var(--black-blue);
-  padding: 30px;
   margin-top: 60px;
   opacity: 1;
-  outline: 0;
 }
 
 .flippable-text:hover::after{
@@ -409,9 +406,9 @@ a{
   opacity: 0;
   width: 100%;
   height: 100%;
-  padding: 40px;
+  padding-top: 40px;
   display: block;
-  transition: 0.7s;
+  transition: 0.78s;
   position: absolute;
   background: var(--indigo-dye);
   content: attr(data-back);
@@ -422,37 +419,70 @@ a{
   top: 0;
   left: 0;
   opacity: 1;
+  padding: 30px;
   display: block;
-  transition: 0.7s;
+  transition: 1s;
   position: relative;
+  background-color: var(--black-blue);
   content: attr(data-front);
   transform: translateY(0) rotateX(0);
 }
 
 
-.f-container{
+.skills-container{
   margin-top: 80px;
 }
 
-.f-container>p{
+.skills-container>p{
   word-spacing: 5px;
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
 }
 
-.frameworks>div{
-  margin: 1rem 0.3rem;
+.skill{
+  margin: 1rem 1rem;
+  user-select: none;
 }
 
-.frameworks>div>img{
-  width: 40px;
-  height: 40px;
+.skill>div>svg{
+  width: 55px;
+  height: 55px;
+  shape-rendering: geometricPrecision;
+  transition: color 0.5s ease;
 }
 
-.frameworks>div>label{
+.figma path{
+  transition: fill 0.5s ease;
+}
+
+.figma:hover path:nth-of-type(1), div:has(.figma+label:hover) .figma>path:nth-of-type(1){
+  fill: #1abcfe;
+}
+
+.figma:hover path:nth-of-type(2), div:has(.figma+label:hover) .figma>path:nth-of-type(2){
+  fill: #0ACF83;
+}
+
+.figma:hover path:nth-of-type(3), div:has(.figma+label:hover) .figma>path:nth-of-type(3){
+  fill: #FF7262;
+}
+
+.figma:hover path:nth-of-type(4), div:has(.figma+label:hover) .figma>path:nth-of-type(4){
+  fill: #F24E1E;
+}
+
+.figma:hover path:nth-of-type(5), div:has(.figma+label:hover) .figma>path:nth-of-type(5){
+  fill: #A258FF;
+}
+
+.skill>svg>path{
+  transition: fill 0.5s ease;
+}
+
+.skill-text{
   font-size: 0.9rem;
-  color: var(--columbia-blue);
-}
-
-.tech-name{
+  line-height: 2rem;
+  color: var(--platinum);
   text-transform: capitalize;
 }
 
@@ -480,18 +510,18 @@ a{
   position: relative;
 }
 
-.container{
+.slider-container{
   position: relative;
   width: 100%;
 }
 
 @media(min-width: 1400px){
-  .container{
+  .slider-container{
     max-width: 1200px;
   }
 }
 
-.container button{
+.slider-container button{
   background-color: var(--black-blue);
   color: var(--crimson);
   width: 3rem;
@@ -504,20 +534,20 @@ a{
   border-radius: 9999px;
 }
 
-.container button:active{
-  transform: scale(105%);
+.slider-container button:active{
+  transform: scale(1.05);
 }
 
-.container .btn-left{
+.slider-container .btn-left{
   left: -1rem;
 }
 
-.container button>svg{
+.slider-container button>svg{
   width: 40px;
   height: 40px;
 }
 
-.wrapper{
+.project-wrapper{
   position: relative;
   overflow: hidden;
   height: 500px;
@@ -525,11 +555,11 @@ a{
   border-radius: 5px;
 }
 
-.wrapper>a{
+.project-wrapper>a{
   text-decoration: none;
 }
 
-.wrapper>a>img{
+.project-wrapper>a>img{
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -538,9 +568,9 @@ a{
   border-radius: 5px;
 }
 
-.wrapper>a>img:hover{
+.project-wrapper>a>img:hover{
   /* opacity: 0.8; */
-  transform: scale(105%);
+  transform: scale(1.05);
 }
 
 .project-title{
@@ -555,7 +585,7 @@ a{
   transition: opacity 0.3s ease;
 }
 
-.wrapper>a>img:hover ~ .project-title{
+.project-wrapper>a>img:hover ~ .project-title{
   opacity: 0;
 }
 
@@ -564,25 +594,25 @@ a{
   margin: 4rem 0;
 }
 
-.center .slick-center .wrapper{
-  transform: scale(120%);
+.center .slick-center .project-wrapper{
+  transform: scale(1.2);
   z-index: 10;
   transition: all 0.4s ease-in-out;
   opacity: 1;
   pointer-events: all;
 }
 
-.center .wrapper{
+.center .project-wrapper{
   opacity: 0.9;
   pointer-events: none;
 }
 
 @media(max-width: 1024){
-  .center .slick-center .wrapper{
-    transform: scale(100%);
+  .center .slick-center .project-wrapper{
+    transform: scale(1);
   }
 
-  .center .wrapper{
+  .center .project-wrapper{
     opacity: 1;
     pointer-events: all;
   }
@@ -676,7 +706,7 @@ a{
 
 .send-btn:active{
   transform-origin: 100% 50%;
-  transform: scale(105%);
+  transform: scale(1.05);
 }
 
 .pattern{
@@ -723,7 +753,7 @@ hr {
 
 .footer-nav>a:hover{
   color: var(--platinum);
-  transform: scale(101%);
+  transform: scale(1.01);
 }
 
 .socials > *{
@@ -732,7 +762,7 @@ hr {
   cursor: pointer;
 }
 
-.socials>img:hover, .frameworks>div:hover{
+.socials>img:hover{
   transform: scale(1.2);
   overflow: hidden;
 }
