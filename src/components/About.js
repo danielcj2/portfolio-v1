@@ -11,7 +11,12 @@ const About = () => {
         <p>Problem solver, critical thinker, passionate worker, loyal at heart, you name it!</p>
         <p>Feel free to hit me up! I tend to respond fairly quick.</p>
         <HashLink className="contact-btn curtain text-center" to="/#contact" scroll={scrollWidthOffset}>Contact</HashLink>
-        <div className="flippable-text" data-back="Self proclaimed gaming enthusiast and avid show watcher." data-front="I'm typically always on the computer, whether it be hacking away at problems of my own doing, or nitpicking padding measurements."></div>
+          <div className="flippable-container">
+            <div className="flippable-card">
+              <div className="face face-front d-flex flex-column justify-content-center">I'm typically always on the computer, whether it be hacking away at problems of my own doing, or nitpicking padding measurements.</div>
+              <div className="face face-top d-flex flex-column justify-content-center">Self proclaimed gaming enthusiast and avid show watcher.</div>
+            </div>
+          </div>
       </div>
     </div>
   )

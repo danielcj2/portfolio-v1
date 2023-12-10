@@ -382,52 +382,45 @@ a{
   margin: 0;
 }
 
-.flippable-text{
-  display: inline-block;
-  position: relative;
+.flippable-container{
   width: 100%;
-  margin-top: 60px;
-  opacity: 1;
+  margin-top: 100px;
 }
 
-.flippable-text:hover::after{
-  opacity: 1;
-  transform: translateY(0) rotateX(0);
-}
-
-.flippable-text:hover::before{
-  opacity: 0;
-  transform: translateY(50%) rotateX(90deg);
-}
-
-.flippable-text::after{
-  top: 0;
-  left: 0;
-  opacity: 0;
+.flippable-card{
   width: 100%;
-  height: 100%;
-  padding-top: 40px;
-  display: block;
-  transition: 0.78s;
-  position: absolute;
-  background: var(--indigo-dye);
-  content: attr(data-back);
-  transform: translateY(-50%) rotateX(90deg);
-}
-
-.flippable-text::before{
-  top: 0;
-  left: 0;
-  opacity: 1;
-  padding: 30px;
-  display: block;
-  transition: 1s;
+  height: 150px;
   position: relative;
-  background-color: var(--black-blue);
-  content: attr(data-front);
-  transform: translateY(0) rotateX(0);
+  animation: flip_card 15s infinite;
+  transform-style: preserve-3d;
 }
 
+@keyframes flip_card {
+  55%  { transform: translateZ(0) rotateX(0deg);   }
+  63%    { transform:  translateZ(75px) rotateX(-90deg); }
+  93%  { transform:  translateZ(75px) rotateX(-90deg); }
+  100%  { transform: translateZ(0) rotateX(0deg);   }
+}
+
+.face {
+  width:100%;
+  height:100%;
+  color: var(--platinum);
+  position:absolute;
+  backface-visibility:hidden;
+  padding: 20px;
+}
+
+.face-front{
+  background-color:var(--black-blue);
+  transform: rotateY(0deg) translateZ(75px);
+}
+
+.face-top{
+  background-color:var(--cerulean);
+  transform: rotateX(90deg) translateZ(75px);
+ 
+}
 
 .skills-container{
   margin-top: 80px;
