@@ -8,8 +8,8 @@
 .not-found h1{
     font-weight: 700;
     font-size: calc(var(--indent) * 4);
-    text-shadow: rgba(54, 84, 126, 0.5) calc(var(--indent) / 4) calc(var(--indent) / 4);
-    color: var(--glaucous);
+    text-shadow: rgba(var(--bg-tertiary-rgb), 0.3) calc(var(--indent) / 4) calc(var(--indent) / 4);
+    color: var(--bg-tertiary);
     margin-bottom: 5rem;
     letter-spacing: var(--indent);
     margin-left: var(--indent);
@@ -28,7 +28,7 @@
     width:fit-content;
     font-size: 1rem;
     text-transform: uppercase;
-    color: var(--columbia-blue);
+    color: var(--font-tertiary);
 }
 
 .not-found .tag{
@@ -36,7 +36,7 @@
 }
 
 .not-found p, .not-found span{
-    color: var(--powder-blue);
+    color: var(--font-secondary);
     font-weight: 400;
     opacity: 0.5;
 }

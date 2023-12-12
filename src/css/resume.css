@@ -1,6 +1,10 @@
+.resume{
+  --alice-blue: #DBE9EE;
+  --azure: #F2FDFF;
+}
 
 .resume>*, .resume svg{
-  color: var(--rich-black);
+  color: var(--bg-main);
 }
 
 .resume{
@@ -42,7 +46,7 @@ aside svg{
 
 .resume-pdf{
   text-decoration: none;
-  color: var(--rich-black);
+  color: var(--bg-main);
   font-size: 1.1rem;
   font-weight: 500;
   transition: transform 0.3s linear;
@@ -50,8 +54,8 @@ aside svg{
 }
 
 .resume-pdf>svg{
-  background-color: var(--rich-black);
-  color: var(--platinum);
+  background-color: var(--bg-main);
+  color: var(--font-primary);
   width: 30px;
   height: 30px;
 }
@@ -61,7 +65,7 @@ aside svg{
 }
 
 div>section:first-child{
-  background-color: var(--rich-black);
+  background-color: var(--bg-main);
   color: var(--azure);
   margin-top: calc(var(--indent) * -1);
   padding: var(--indent);
@@ -113,7 +117,7 @@ p{
 
 .resume a:not(.resume-pdf){
   position: relative;
-  color: var(--indigo-dye);
+  color: var(--stroke-primary);
   font-weight: 500;
   font-style: italic;
   cursor: pointer;
@@ -123,7 +127,7 @@ p{
 .resume a:not(.resume-pdf)::after{
   display: block;
   content: "";
-  background-color: var(--cerulean);
+  background-color: var(--stroke-secondary);
   height: 0.3rem;
   width: 110%;
   position: absolute;
@@ -134,7 +138,7 @@ p{
 }
 
 .resume a:hover{
-  color: var(--rich-black);
+  color: var(--bg-main);
 }
 
 .resume a:not(.resume-pdf):hover::after{
@@ -143,7 +147,7 @@ p{
 }
 
 .resume a ~ p:not(.project-description){
-  color: var(--glaucous);
+  color: var(--bg-tertiary);
   font-weight: 400;
   font-style: italic;
   opacity: 0.9;
@@ -155,7 +159,7 @@ p{
 }
 
 .resume-skill{
-  color: var(--indigo-dye);
+  color: var(--stroke-primary);
   font-weight: 500;
   line-height: 1.3rem;
   list-style: square;
@@ -178,7 +182,7 @@ p{
 }
 
 .resume h2{
-  background-color: var(--indigo-dye);
+  background-color: var(--stroke-primary);
   color: var(--alice-blue);
   letter-spacing: 5px;
   padding-bottom: calc(var(--indent) / 2);
@@ -196,7 +200,7 @@ p{
 
 .project-heading>.bold{
   font-size: 1.1rem;
-  color: var(--indigo-dye);
+  color: var(--stroke-primary);
 }
 
 .bold{
