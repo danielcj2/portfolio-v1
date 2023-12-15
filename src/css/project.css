@@ -1,5 +1,4 @@
 .project{
-  padding-top: calc(var(--indent) * 2) !important;
   transition: padding 1s ease;
 }
 
@@ -107,5 +106,17 @@
 @media (max-width: 1400px){
   .section__:not(.project-details){
     max-width: 100%;
+  }
+}
+
+@media (min-width: 1200px){
+  .project{
+    padding-top: calc(var(--indent) * 3);
+  }
+}
+
+@media (max-width: 1200px){
+  .project{
+    padding-top: calc(var(--indent) * 4);
   }
 }

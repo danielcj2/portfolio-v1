@@ -1,9 +1,7 @@
-import gmailSVG from "../svg/gmail.svg";
-import githubSVG from "../svg/github.svg";
-import linkedinSVG from "../svg/linkedin.svg";
 import { HashLink } from "react-router-hash-link";
 import { scrollWidthOffset } from "./Functions";
-
+import { FaGithub, FaLinkedin,  } from "react-icons/fa";
+import { FiAtSign } from "react-icons/fi";
 
 const Footer = () => {
   
@@ -19,9 +17,9 @@ const Footer = () => {
       </div>
       <hr/>
       <div className="socials">
-        <img src={linkedinSVG} alt="LinkedIn Icon" />
-        <img src={githubSVG} alt="Github Icon" />
-        <img src={gmailSVG} alt="Gmail Icon" />
+        <a href="https://www.linkedin.com/in/danielcj2/" target="_blank" rel="noopener noreferrer"><FaLinkedin /></a>
+        <a href="https://github.com/danielcj2" target="_blank" rel="noopener noreferrer"><FaGithub /></a>
+        <a href="mailto:danielcojocea18@gmail.com"><FiAtSign /></a>
       </div>
       <div className="footer-credentials d-flex align-self-center">Designed & Built by Daniel Cojocea</div>
     </footer>

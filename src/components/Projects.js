@@ -1,12 +1,10 @@
 import SectionHeading from "./SectionHeading";
-import { ImCloudDownload } from "react-icons/im";
 import SliderComponent from "./SliderComponent";
 
 const Projects = () => {
   
   return (
     <>
-      <button className="resume-break"><ImCloudDownload className="react-icon"/></button>
       <div className="section center d-flex flex-column justify-content-center">
         <div className="projects text-center" id="projects">
           {/* <div className="gradient__wrapper d-flex justify-content-around">

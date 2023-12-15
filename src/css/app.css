@@ -51,6 +51,10 @@ header{
   border: solid 0.1rem rgba(var(--bg-tertiary-rgb), 0.5);
 }
 
+.scrolled>div>div:not(.not)>a{
+  color: white !important;
+}
+
 .header-wrapper{
   width: 100%;
 }
@@ -90,6 +94,7 @@ header{
   text-transform: uppercase;
   text-shadow: var(--font-tertiary) 1px 0 20px;
   font-size: 1.5rem;
+  line-height: 0;
   background: var(--bg-main);
   width: 50px;
   height: 50px;
@@ -151,6 +156,10 @@ header{
 .theme-change-btn:hover svg{
   color: var(--btn-theme-hover);
   transform: rotate(90deg) scale(5.2);
+}
+
+.moon:hover svg{
+  transform: rotate(90deg) scale(5.6) translate(8px);
 }
 
 .section{
@@ -260,21 +269,33 @@ a{
   top: 0;
 }
 
-.resume-break{
-  color: var(--bg-main);
+.break{
+  margin-bottom: 300px;
+  overflow: hidden;
+}
+
+.break>div{
+  background-color: var(--bg-secondary);
+}
+
+.spacer{
   width: 100%;
-  margin-bottom: 150px;
-  padding: 1.5rem;
-  background-color: var(--bg-tertiary);
-  font-weight: 500;
+  height: auto;
+}
+
+.spacer-bottom{
+  transform: rotate(180deg);
+}
+
+.resume-break{
+  font-family: 'Life Savers', serif;
+  color: var(--font-primary);
+  padding: 0.6rem;
+  font-weight: 700;
   font-size: 1.5rem;
-  text-transform: uppercase;
+  text-transform: capitalize;
   word-spacing: 5px;
-  background: var(--bg-tertiary);
-  -webkit-transition: background-color 1s ease-out;
-  -moz-transition: background-color 1s ease-out;
-  -o-transition: background-color 1s ease-out;
-  transition: background-color 1s ease-out;
+  letter-spacing: 5px;
 }
 
 .react-icon{
@@ -282,26 +303,6 @@ a{
   font-size: 1.5rem;
   transform: scale(2);
   overflow: hidden;
-}
-
-/* .resume-break::after, .resume-break::before{
-  transition: all 500ms ease-in-out;
-} */
-
-.resume-break:hover{
-  background-color: var(--font-secondary);
-}
-
-.resume-break::before{
-  content: "view my resume";
-}
-
-.resume-break:hover .react-icon{
-  display: inline-block;
-}
-
-.resume-break:hover:before {
-  display: none;
 }
 
 .resume-btn:active, .contact-btn:active{
@@ -427,11 +428,12 @@ a{
   width: 55px;
   height: 55px;
   shape-rendering: geometricPrecision;
-  transition: color 0.5s ease;
+  transition: color 0.5s ease-out;
 }
 
 .figma path{
   transition: fill 0.5s ease;
+  transform: scale(0.99);
 }
 
 .figma:hover path:nth-of-type(1), div:has(.figma+label:hover) .figma>path:nth-of-type(1){
@@ -454,8 +456,8 @@ a{
   fill: #A258FF;
 }
 
-.skill>svg>path{
-  transition: fill 0.5s ease;
+.bg-hover-false svg{
+  color: var(--font-tertiary);
 }
 
 .skill-text{
@@ -502,7 +504,7 @@ a{
 
 .slider-container button{
   background-color: var(--bg-secondary);
-  color: var(--outline-important);
+  color: var(--hr-break);
   width: 3rem;
   height: 3rem;
   cursor: pointer;
@@ -719,7 +721,6 @@ hr {
 
 .footer-nav>a:hover{
   color: var(--font-primary);
-  transform: scale(1.01);
 }
 
 .socials > *{
@@ -728,7 +729,14 @@ hr {
   cursor: pointer;
 }
 
-.socials>img:hover{
+.socials>a svg{
+  color: var(--hr-break);
+  height: 30px;
+  width: auto;
+  shape-rendering: geometricPrecision;
+}
+
+.socials>a:hover svg{
   transform: scale(1.2);
   overflow: hidden;
 }
