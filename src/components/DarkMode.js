@@ -23,6 +23,10 @@ const DarkMode = createGlobalStyle`
         background: rgb(4,8,15);
         background: linear-gradient(129deg, rgba(4,8,15,1) 0%, rgba(8,13,22,1) 50%, rgba(13,19,32,1) 80%, rgba(4,8,15,1) 100%);
     }
+
+    .loading-screen{
+        background: var(--bg-secondary);
+    }
 `;
  
 export default DarkMode;

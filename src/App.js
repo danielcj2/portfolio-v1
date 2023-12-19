@@ -20,6 +20,7 @@ function App() {
         <Route path="/resume" element={<Resume />} /> 
         <Route path="/projects/:path" element={<Project />} />  
         <Route path="*" element={<NotFound />}/>
+        <Route path="/projects/*" element={<NotFound />}/>
       </Routes>
     </>
   );

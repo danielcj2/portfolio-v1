@@ -6,6 +6,8 @@ import { useParams } from 'react-router-dom';
 import { scrollWidthOffset } from "../components/Functions";
 import { FaArrowLeftLong } from "react-icons/fa6";
 import { FaGithub } from "react-icons/fa";
+import TransitionScreen from '../components/TransitionScreen';
+import { useState, useEffect } from 'react';
 
 import '../css/project.css';
 
@@ -46,8 +48,15 @@ const Project = () => {
   const { path } = useParams();
   var projectFound = projectList.find(p => p.path === path);
   
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => setLoading(false), 2000)
+  }, []);
+
   return (
     <>
+      {loading && <TransitionScreen />}
       {(typeof(projectFound) === 'undefined') ? <NotFound /> : <><Header /><main className="project">
         <div className="section__ project-details mx-auto d-flex flex-column justify-content-end">
           <div>
