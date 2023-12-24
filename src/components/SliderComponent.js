@@ -51,21 +51,21 @@ const SliderComponent = () => {
   const projectList = [
     {
       id: 1,
-      name: 'Guessdle',
+      name: 'guessdle',
       description: '',
       path: '/projects/guessdle#',
       background: guessdleImg,
     }, 
     {
       id: 2,
-      name: 'Movie Ranker',
+      name: 'movie-ranker',
       description: '',
       path: '/projects/movie_ranker#',
       background: movie_rankerImg,
     }, 
     {
       id: 3,
-      name: 'Portfolio',
+      name: 'portfolio',
       description: '',
       path: '/projects/portfolio#',
       background: portfolioImg,
@@ -77,7 +77,7 @@ const SliderComponent = () => {
   return (
     <div className="slider-container mx-auto">
       <Slider ref={arrowRef} {...settings}>
-        {projectList.map((project) => (<div className="project-wrapper" key={project.id}><HashLink to={project.path}><img src={project.background} alt="Project cover" /><h5 className="project-title text-start">{project.name}</h5><div className="description">{project.description}</div></HashLink></div>))}{projectList.map((project) => (<div className="project-wrapper" key={project.id}><HashLink to={project.path}><img src={project.background} alt="Project cover" /><h5 className="project-title text-start">{project.name}</h5><div className="description">{project.description}</div></HashLink></div>))}
+        {projectList.map((project) => (<div className={"project-wrapper " + project.name} key={project.id}><HashLink to={project.path}><img src={project.background} alt="Project cover" /></HashLink></div>))}{projectList.map((project) => (<div className={"project-wrapper " + project.name} key={project.id}><HashLink to={project.path}><img src={project.background} alt="Project cover" /></HashLink></div>))}
       </Slider>
       <button className="btn-left" onClick={() =>arrowRef.current.slickPrev()}><MdOutlineKeyboardArrowLeft/></button>
       <button className="btn-right" onClick={() =>arrowRef.current.slickNext()}><MdOutlineKeyboardArrowRight/></button>
