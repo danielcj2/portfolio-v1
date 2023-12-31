@@ -6,6 +6,7 @@ const Projects = () => {
   return (
     <>
       <div className="section center d-flex flex-column justify-content-center">
+        <hr />
         <div className="projects text-center" id="projects">
           {/* <div className="gradient__wrapper d-flex justify-content-around">
             <div className="gradient">
