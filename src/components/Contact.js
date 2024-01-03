@@ -1,4 +1,4 @@
-import SectionHeading from "./SectionHeading";
+// import SectionHeading from "./SectionHeading";
 import Form from './Form';
 import { IoMdMail } from "react-icons/io";
 
@@ -12,7 +12,7 @@ const Contact = () => {
           <h2>I'd love to hear from you.</h2>
           <div className="email-fill">
             <h5>Got a question, or just want to say hello?</h5>
-            <h6>EMAIL</h6>
+            <h6>CONTACT</h6>
             <a href="mailto:danielcojocea18@gmail.com" className="align-"><IoMdMail /> danielcojocea18@gmail.com</a>
           </div>
         </div>  

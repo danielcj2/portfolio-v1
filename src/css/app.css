@@ -12,6 +12,7 @@
 
 *{
   scrollbar-width: thin;
+  scroll-behavior: smooth;
 }
 
 *::-webkit-scrollbar {
@@ -39,7 +40,7 @@ header{
   top: 0;
   left: 0;
   right: 0;
-  z-index: 100;
+  z-index: 10;
   border: solid 1px transparent;
   border-radius: 2px;
 }
@@ -57,6 +58,7 @@ header{
 
 .header-wrapper{
   width: 100%;
+  min-height: 45px;
 }
 
 .header-component{
@@ -84,9 +86,91 @@ header{
   padding: 0;
 }
 
-.header-component:first-child{
+.header-component.not:first-child{
   position: absolute;
   left: 0;
+}
+
+.nav-btn{
+  display: none;
+}
+
+@media only screen and (max-width: 800px){
+  .nav-btn{
+    display: block;
+    position: absolute;
+    border: 2px solid var(--bg-tertiary);
+    border-radius: 10px;
+  }
+
+  .bars {
+    width: 35px;
+    cursor: pointer;
+  }
+
+  .bars .line {
+    fill: none;
+    stroke: #FFFFFF;
+    stroke-width: 4;
+    stroke-linecap: square;
+    transition: stroke-dasharray 400ms,  stroke-dashoffset 400ms;
+  }
+  .bars .line.top {
+    stroke-dasharray: 40 172;
+  }
+  .bars .line.middle {
+    stroke-dasharray: 40 111;
+  }
+  .bars .line.bottom {
+    stroke-dasharray: 40 172;
+  }
+  .bars.active .top {
+    stroke-dashoffset: -132px;
+  }
+  .bars.active .middle {
+    stroke-dashoffset: -71px;
+  }
+  .bars.active .bottom {
+    stroke-dashoffset: -132px;
+  }
+
+  .scrolled:has(.responsive-nav){
+    margin-right: calc(var(--indent) + 10px);
+  }
+
+  .header-component a{
+    font-size: 1rem;
+  }
+
+  nav{
+    position: fixed;
+    top: -100vh;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--bg-secondary);
+    transition: 1s;
+    transform: translateY(-100vh);
+  }
+
+  body:has(.responsive-nav){
+    overflow: hidden;
+  }
+
+  .responsive-nav{
+    transform: translateY(100vh);
+  }
+
+  .scrolled{
+    transition: none;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
 }
 
 .star{
@@ -191,20 +275,20 @@ header{
 .intro>h3{
   color: var(--font-primary);
   font-weight: 300;
-  font-size: 1.2rem;
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
   word-spacing: 0.2rem;
 }
 
 .intro>h1{
   color: var(--bg-tertiary);
-  font-size: 4rem;
+  font-size: clamp(2.7rem, 8vw, 4rem);
   font-weight: 700;
   margin-left: -4px;
 }
 
 .intro>h2 {
   color: rgba(var(--bg-tertiary-rgb), 0.5) !important;
-  font-size: 3.3rem !important;
+  font-size: clamp(2.5rem, 7vw, 3.3rem) !important;
   font-weight: 600 !important;
 }
 
@@ -217,7 +301,7 @@ header{
   font-weight: 400;
   opacity: 0.5;
   margin: 0;
-  font-size: 1.2rem;
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
   word-spacing: 0.2rem;
 }
 
@@ -346,7 +430,7 @@ a{
 
 .section>div>h2{
   color: var(--bg-tertiary);
-  font-size: 2rem;
+  font-size: clamp(1.5rem, 5vw, 2rem);
   font-weight: 700;
   margin-bottom: 3rem;
 }
@@ -681,7 +765,7 @@ a{
 .section:has(.contact)>div>h2{
   font-weight: 600;
   margin: 0;
-  font-size: 3.3rem;
+  font-size: clamp(2.5rem, 9vw, 3.3rem);
   line-height: 0.9;
 }
 
@@ -692,7 +776,7 @@ a{
 .email-fill>h5{
   color: var(--font-primary);
   font-weight: 300;
-  font-size: 1.05rem;
+  font-size: clamp(0.95rem, 2vw, 1.05rem);
   word-spacing: 0.1rem;
   margin-bottom: 50px;
   opacity: 0.4;
@@ -700,11 +784,11 @@ a{
 
 .email-fill a, .email-fill h6{
   text-decoration: none;
-  font-size: 0.9rem;
+  font-size: clamp(0.85rem, 2vw, 0.95rem);
   color: var(--font-tertiary);
   opacity: 0.8;
   margin: 0;
-  transition: all 0.5s;
+  transition: all 0.3s;
 }
 
 .email-fill svg{
@@ -926,4 +1010,58 @@ hr {
   to {
     top: -100vh;
   }
+}
+
+@media(max-width: 600px){
+  .star{
+    font-size: 1.2rem;
+    width: 40px;
+    height: 40px;
+  }
+
+  .star:before{
+    width: 40px;
+    height: 40px;
+  }
+
+  .theme-change-btn{
+    border: solid 0.15rem var(--bg-tertiary);
+  }
+
+  .intro>h1{
+    margin: 0;
+  }
+
+  .intro>h3{
+    margin-left: 4px;
+  }
+
+  .skill>div>svg{
+    width: 35px;
+    height: 35px;
+  }
+}
+
+@media(max-width: 900px){
+  .section:has(.contact){
+    flex-flow: column-reverse !important;
+  }
+
+  .section:has(.contact) div>.section-heading{
+    margin-bottom: 5px;
+  }
+
+  .email-fill{
+    margin-bottom: 50px;
+  }
+
+  .contact{
+    margin-right: 0;
+  }
+}
+
+@media(min-width: 900px) and (max-width:1100px){
+  .contact{
+    margin-right: 30px;
+  } 
 }
