@@ -52,7 +52,7 @@ const Form = ({blur, focus}) => {
             <textarea id="message-textbox" name="message" rows="5" value={values.message} onChange={handleChange} onBlur={handleFocus} focused={focused.message.toString()} required ></textarea>
             <span className="txtSpan text-left align-items-center"><BsExclamationCircle />Message cannot be empty</span>
             <div className="d-flex justify-content-end">
-            <button type="submit" className="send-btn">Hit me up <BsSendFill /></button>
+            <button type="submit" className="send-btn">Shoot me <BsSendFill /></button>
             </div> 
         </form>
     )

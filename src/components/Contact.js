@@ -6,8 +6,8 @@ const Contact = () => {
   return (
     <>
       <hr />
-      <div className="section d-flex flex-row align-items-stretch">
-        <div className="order-2 flex-fill">
+      <div className="section d-flex flex-row align-items-stretch justify-content-center">
+        <div className="flex-fill">
           <div className="section-heading">Get in Touch</div>
           <h2>I'd love to hear from you.</h2>
           <div className="email-fill">

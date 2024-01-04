@@ -95,116 +95,6 @@ header{
   display: none;
 }
 
-@media only screen and (max-width: 800px){
-  .nav-btn{
-    display: block;
-    position: absolute;
-    border: 2px solid var(--bg-tertiary);
-    border-radius: 10px;
-  }
-
-  .hidden {
-    display: none;
-  }
-
-  .hamburger {
-    margin-right: 10px;
-    width: 30px;
-    height: 30px;
-    position: relative;
-    cursor: pointer;
-  }
-
-  .hamburger .bar {
-    padding: 0;
-    width: 30px;
-    height: 3px;
-    background-color: var(--bg-tertiary);
-    display: block;
-    border-radius: 4px;
-    transition: all 0.7s ease-in-out;
-    position: absolute; 
-  }
-
-  .bar1 {
-    top: 2px;
-  }
-
-  .bar2,
-  .bar3 {
-      top: 12.5px;
-  }
-
-  .bar3 {
-      right: 0;
-  }
-
-  .bar4 {
-    bottom: 2px;
-
-  }
-
-  .nav-btn:checked + label > .hamburger > .bar1{
-    transform: rotate(45deg);
-    transform-origin: 5%;
-    width: 37px
-  }
-
-  .nav-btn:checked + label > .hamburger > .bar2 {
-    transform: translateX(-40px);
-    background-color: transparent;
-  }
-
-  .nav-btn:checked + label > .hamburger > .bar3 {
-    transform: translateX(40px);
-    background-color: transparent;
-  }
-
-  .nav-btn:checked + label > .hamburger > .bar4 {
-    transform-origin: 5%;
-    transform: rotate(-45deg);
-    width: 37px;
-  }
-
-  .scrolled:has(.responsive-nav){
-    margin-right: calc(var(--indent) + 10px);
-  }
-
-  .header-component a{
-    font-size: 1rem;
-  }
-
-  nav{
-    position: fixed;
-    top: -100vh;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--bg-secondary);
-    transition: 1s;
-    transform: translateY(-100vh);
-  }
-
-  body:has(.responsive-nav){
-    overflow: hidden;
-  }
-
-  .responsive-nav{
-    transform: translateY(100vh);
-  }
-
-  .scrolled{
-    transition: none;
-    backdrop-filter: none;
-    -webkit-backdrop-filter: none;
-  }
-}
-
 .star{
   font-family: 'Life Savers', serif;
   text-transform: uppercase;
@@ -236,7 +126,7 @@ header{
 }
 
 .star:hover:before{
-  transform: scale(0.5);
+  transform: scale(0.7);
 }
 
 .header-component:has(.star) a:hover{
@@ -387,7 +277,7 @@ a{
 
 .break{
   position: relative;
-  margin-bottom: 300px;
+  margin-bottom: 150px;
   overflow: hidden;
   height: 270px;
 }
@@ -406,6 +296,10 @@ a{
 }
 
 @media (max-width: 1200px) {
+  header{
+    margin: calc(var(--indent));
+  }
+
   .spacer{
     width: 2000px;
   }
@@ -467,6 +361,10 @@ a{
   margin-bottom: 3rem;
 }
 
+p{
+  font-size: clamp(0.93rem, 2vw, 1rem);
+}
+
 .about>p{
   margin-top: 2rem;
   margin-bottom: 1rem;
@@ -509,8 +407,10 @@ a{
 }
 
 .flippable-card{
+  --card-height: 150px;
+
   width: 100%;
-  height: 150px;
+  height: var(--card-height);
   position: relative;
   animation: flip_card 15s infinite;
   transform-style: preserve-3d;
@@ -518,8 +418,8 @@ a{
 
 @keyframes flip_card {
   55%  { transform: translateZ(0) rotateX(0deg);   }
-  63%    { transform:  translateZ(75px) rotateX(-90deg); }
-  93%  { transform:  translateZ(75px) rotateX(-90deg); }
+  63%    { transform:  translateZ(calc(var(--card-height) / 2)) rotateX(-90deg); }
+  93%  { transform:  translateZ(calc(var(--card-height) / 2)) rotateX(-90deg); }
   100%  { transform: translateZ(0) rotateX(0deg);   }
 }
 
@@ -534,12 +434,12 @@ a{
 
 .face-front{
   background-color:var(--bg-secondary);
-  transform: rotateY(0deg) translateZ(75px);
+  transform: rotateY(0deg) translateZ(calc(var(--card-height) / 2));
 }
 
 .face-top{
   background-color:var(--stroke-secondary);
-  transform: rotateX(90deg) translateZ(75px);
+  transform: rotateX(90deg) translateZ(calc(var(--card-height) / 2));
  
 }
 
@@ -790,15 +690,14 @@ a{
   margin-top: 150px;
 }
 
-.contact{
-  margin-right: 100px;
+.section:has(.contact)>div>h2{
+  margin: 0;
+  font-size: clamp(1rem, 9vw, 3.3rem);
+  line-height: 0.9;
 }
 
-.section:has(.contact)>div>h2{
-  font-weight: 600;
-  margin: 0;
-  font-size: clamp(2.5rem, 9vw, 3.3rem);
-  line-height: 0.9;
+.flex-fill:first-child{
+  margin-right: 10px;
 }
 
 .email-fill{
@@ -806,12 +705,12 @@ a{
 }
 
 .email-fill>h5{
-  color: var(--font-primary);
+  color: var(--font-tertiary);
   font-weight: 300;
-  font-size: clamp(0.95rem, 2vw, 1.05rem);
+  font-size: clamp(1rem, 2vw, 1.2rem);
   word-spacing: 0.1rem;
   margin-bottom: 50px;
-  opacity: 0.4;
+  opacity: 0.8;
 }
 
 .email-fill a, .email-fill h6{
@@ -971,7 +870,6 @@ hr {
 }
 
 .footer-nav{
-  width: 80%;
   margin: 0;
   line-height: 2rem;
 }
@@ -1010,7 +908,7 @@ hr {
   color: var(--font-primary);
   opacity: 0.2;
   font-size: 0.75rem;
-  margin-bottom: 5px;
+  margin-bottom: 15px;
   word-spacing: 2.5px;
 }
 
@@ -1047,13 +945,23 @@ hr {
 @media(max-width: 600px){
   .star{
     font-size: 1.2rem;
-    width: 40px;
-    height: 40px;
+    transform: scale(0.8);
+    background-color: var(--bg-main);
+    z-index: 10 !important;
   }
 
   .star:before{
-    width: 40px;
-    height: 40px;
+    transform: scale(0.8);
+    -webkit-transform: rotate(15deg);
+  }
+
+  .flippable-card{
+    --card-height: 115px;
+  }
+
+  .face{
+    padding: 15px;
+    font-size: 0.93rem;
   }
 
   .theme-change-btn{
@@ -1072,11 +980,139 @@ hr {
     width: 35px;
     height: 35px;
   }
+
+  .send-btn{
+    width: 100%;
+  }
+}
+
+@media(min-width: 600px) and (max-width: 900px){
+  html:has(.responsive-nav){
+    margin-right: 10px;
+  }
+
+  header:has(.responsive-nav){
+    margin-right: calc(var(--indent) + 10px);
+  }
+}
+
+@media only screen and (max-width: 900px){
+  .section{
+    align-items: center;
+  }
+
+  .section>div{
+    max-width: none;
+  }
+
+  .nav-btn{
+    display: block;
+    position: absolute;
+    border: 2px solid var(--bg-tertiary);
+    border-radius: 10px;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  .hamburger {
+    margin-right: 10px;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    cursor: pointer;
+  }
+
+  .hamburger .bar {
+    padding: 0;
+    width: 30px;
+    height: 3px;
+    background-color: var(--bg-tertiary);
+    display: block;
+    border-radius: 4px;
+    transition: all 0.7s ease-in-out;
+    position: absolute; 
+  }
+
+  .bar1 {
+    top: 2px;
+  }
+
+  .bar2,
+  .bar3 {
+      top: 12.5px;
+  }
+
+  .bar3 {
+      right: 0;
+  }
+
+  .bar4 {
+    bottom: 2px;
+
+  }
+
+  .nav-btn:checked + label > .hamburger > .bar1{
+    transform: rotate(45deg);
+    transform-origin: 5%;
+    width: 37px
+  }
+
+  .nav-btn:checked + label > .hamburger > .bar2 {
+    transform: translateX(-40px);
+    background-color: transparent;
+  }
+
+  .nav-btn:checked + label > .hamburger > .bar3 {
+    transform: translateX(40px);
+    background-color: transparent;
+  }
+
+  .nav-btn:checked + label > .hamburger > .bar4 {
+    transform-origin: 5%;
+    transform: rotate(-45deg);
+    width: 37px;
+  }
+
+  .header-component a{
+    font-size: 1rem;
+  }
+
+  nav{
+    position: fixed;
+    top: -100vh;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--bg-secondary);
+    transition: 1s;
+    transform: translateY(-100vh);
+  }
+
+  html:has(.responsive-nav){
+    overflow: hidden;
+  }
+
+  .responsive-nav{
+    transform: translateY(100vh);
+  }
+
+  .scrolled{
+    transition: none;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
 }
 
 @media(max-width: 900px){
   .section:has(.contact){
-    flex-flow: column-reverse !important;
+    flex-flow: column !important;
   }
 
   .section:has(.contact) div>.section-heading{
@@ -1086,14 +1122,10 @@ hr {
   .email-fill{
     margin-bottom: 50px;
   }
-
-  .contact{
-    margin-right: 0;
-  }
 }
 
 @media(min-width: 900px) and (max-width:1100px){
-  .contact{
-    margin-right: 30px;
+  .contact form{
+    min-width: 375px;
   } 
 }
