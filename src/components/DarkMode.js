@@ -6,7 +6,7 @@ const DarkMode = createGlobalStyle`
         --bg-secondary: #0D1320; 
         --bg-tertiary: #507DBC;
         --bg-tertiary-rgb: 80, 125, 188;  
-        --font-primary: #DAE3E5;  
+        --font-primary: #c5cde0;  
         --font-secondary: #A1C6EA; 
         --font-tertiary: #BBD1EA; 
         --border-font-tertiary-rgb: 187,209,234;

@@ -5,11 +5,11 @@ import { IoMdMail } from "react-icons/io";
 const Contact = () => {  
   return (
     <>
-      <hr />
+      <hr className="hr-section-break"/>
       <div className="section d-flex flex-row align-items-stretch justify-content-center">
         <div className="flex-fill">
           <div className="section-heading">Get in Touch</div>
-          <h2>I'd love to hear from you.</h2>
+          <h2 className="section-title">I'd love to hear from you.</h2>
           <div className="email-fill">
             <h5>Got a question, or just want to say hello?</h5>
             <h6>CONTACT</h6>

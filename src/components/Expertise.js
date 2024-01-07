@@ -76,12 +76,12 @@ const Expertise = () => {
   
   return (
     <div className="section d-flex flex-column justify-content-center">
-      <div className="expertise text-center" id="expertise">
+      <div className="expertise text-left" id="expertise">
         <SectionHeading head="Expertise" title="Skills & Competencies" />
         <p>I've been doing web development for a little while now, and I'm continuously eager to learn more in this ever growing fast paced industry.</p>
         <div className="skills-container">
           <p>SOME TECHNOLOGIES I'VE WORKED WITH:</p>
-          <div className="skills d-flex flex-wrap justify-content-center">
+          <div className="skills d-flex flex-wrap ">
             {techItems.map((item, index) => (<div className="skill" key={index}><Icon svgPath={item.icon} styleTrue={item.styleTrue} iconName={item.name}/></div>))}
           </div>
         </div>

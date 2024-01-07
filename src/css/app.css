@@ -171,7 +171,7 @@ header{
 .section{
   min-height: 850px;
   padding: 0 var(--indent);
-  margin-bottom: 150px;
+  margin-bottom: 50px;
   transition: padding 0.3s ease-out;
 }
 
@@ -338,12 +338,18 @@ a{
 }
 
 .section-heading{
-  opacity: 0.4;
+  display: inline-block;
+  text-transform: uppercase;
+  background-color: var(--bg-secondary);
+  border: solid 1px var(--stroke-secondary);
+  box-shadow: 3px -3px 0 0 var(--bg-tertiary);
+  padding: 2px 7px;
+  border-radius: 2px;
   font-size: 0.9rem;
-  user-select: none;
+  margin-bottom: 10px;
 }
 
-.section-heading::before, .section-heading::after{
+/* .section-heading::before, .section-heading::after{
   display: inline-block;
   padding: 0 3px;
   font-size: 1rem;
@@ -352,9 +358,9 @@ a{
 
 .section-heading::after{
   transform: scale(-1, 1);
-}
+} */
 
-.section>div>h2{
+.section-title{
   color: var(--bg-tertiary);
   font-size: clamp(1.5rem, 5vw, 2rem);
   font-weight: 700;
@@ -372,25 +378,25 @@ p{
 }
 
 .underline-slide{
-  display: inline-block;
   position: relative;
+  display: inline-block;
   color: var(--bg-tertiary);
-  font-weight: 700;
-  padding: 0 0.1rem;
-  margin-bottom: -0.35rem;
+  font-weight: 500;
+  margin-bottom: -8px;
   overflow: hidden;
 }
 
 .underline-slide::after{
   content: '';
-  position: absolute;
-  bottom: 0;
+  position: relative;
+  display: block;
   left: 0;
+  bottom: 0.2rem;
   width: 100%;
-  height: 0.2rem;
+  height: 2px;
   background-color: var(--stroke-secondary);
   transform: translate3d(-101%, 0, 0);
-  transition:  transform 0.3s linear;
+  transition:  transform 0.2s linear;
 }
 
 .underline-slide:hover::after, .underline-slide:focus::after{
@@ -398,12 +404,13 @@ p{
 }
 
 .contact-btn{
-  margin: 0;
+  margin: 0.5rem 1rem;
 }
 
 .flippable-container{
-  width: 100%;
-  margin-top: 100px;
+  display: inline-block;
+  width: calc(100% + var(--indent) * 2);
+  margin: 50px calc(var(--indent) * -1);
 }
 
 .flippable-card{
@@ -429,7 +436,7 @@ p{
   color: var(--font-primary);
   position:absolute;
   backface-visibility:hidden;
-  padding: 20px;
+  padding: 10px var(--indent);
 }
 
 .face-front{
@@ -445,12 +452,15 @@ p{
 
 .skills-container{
   margin-top: 80px;
+  
+  --svg-width: 45px;
 }
 
 .skills-container>p{
   word-spacing: 5px;
   letter-spacing: 1px;
   margin-bottom: 1rem;
+  margin-left: calc(var(--svg-width) / 2.5);
 }
 
 .skill{
@@ -459,8 +469,8 @@ p{
 }
 
 .skill>div>svg{
-  width: 55px;
-  height: 55px;
+  width: var(--svg-width);
+  height: calc(var(--svg-width) + 3px);
   shape-rendering: geometricPrecision;
   transition: color 0.5s ease-out;
 }
@@ -705,9 +715,8 @@ p{
 }
 
 .email-fill>h5{
-  color: var(--font-tertiary);
   font-weight: 300;
-  font-size: clamp(1rem, 2vw, 1.2rem);
+  font-size: clamp(1rem, 2vw, 1.1rem);
   word-spacing: 0.1rem;
   margin-bottom: 50px;
   opacity: 0.8;
@@ -857,16 +866,16 @@ footer > *{
   margin-top: 1rem;
 }
 
-.section hr{
-  margin-bottom: 150px;
-}
-
 hr {
   margin: 20px 0;
   height: 1px;
   border: none;
   background: -moz-linear-gradient(left,  transparent 0%, var(--hr-break) 50%, transparent 100%);
   background: -webkit-linear-gradient(left,  transparent 0%,var(--hr-break) 50%,transparent 100%);
+}
+
+.hr-section-break{
+  margin: 100px;
 }
 
 .footer-nav{
@@ -877,11 +886,11 @@ hr {
 .footer-nav>a{
   font-size: 0.85rem;
   margin: 0 1rem;
-  color: rgba(var(--border-font-tertiary-rgb), 0.8);
+  color: var(--font-primary);
 }
 
 .footer-nav>a:hover{
-  color: var(--font-primary);
+  opacity: 0.5;
 }
 
 .socials > *{
@@ -943,11 +952,14 @@ hr {
 }
 
 @media(max-width: 600px){
+  .theme-change-btn{
+    border: solid 0.15rem var(--bg-tertiary);
+  }
+
   .star{
     font-size: 1.2rem;
     transform: scale(0.8);
     background-color: var(--bg-main);
-    z-index: 10 !important;
   }
 
   .star:before{
@@ -955,17 +967,16 @@ hr {
     -webkit-transform: rotate(15deg);
   }
 
+  .contact-btn{
+    margin: 1rem 5rem 0 0;
+  }
+
   .flippable-card{
     --card-height: 115px;
   }
 
   .face{
-    padding: 15px;
     font-size: 0.93rem;
-  }
-
-  .theme-change-btn{
-    border: solid 0.15rem var(--bg-tertiary);
   }
 
   .intro>h1{
@@ -976,9 +987,29 @@ hr {
     margin-left: 4px;
   }
 
-  .skill>div>svg{
-    width: 35px;
-    height: 35px;
+  .skills-container{
+    --svg-width: 30px;
+  }
+
+  .skills-container>p{
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .skills{
+    justify-content: center;
+  }
+
+  .skill-text{
+    font-size: 0.8rem;
+  }
+
+  .slick-slide{
+    margin: 0;
+  }
+
+  .hr-section-break{
+    margin: 50px;
   }
 
   .send-btn{
@@ -1113,10 +1144,6 @@ hr {
 @media(max-width: 900px){
   .section:has(.contact){
     flex-flow: column !important;
-  }
-
-  .section:has(.contact) div>.section-heading{
-    margin-bottom: 5px;
   }
 
   .email-fill{
