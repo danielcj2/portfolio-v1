@@ -79,8 +79,8 @@ const SliderComponent = () => {
       <Slider ref={arrowRef} {...settings}>
         {projectList.map((project) => (<div className={"project-wrapper " + project.name} key={project.id}><HashLink to={project.path}><img src={project.background} alt="Project cover" /></HashLink></div>))}{projectList.map((project) => (<div className={"project-wrapper " + project.name} key={project.id}><HashLink to={project.path}><img src={project.background} alt="Project cover" /></HashLink></div>))}
       </Slider>
-      <button className="btn-left" onClick={() =>arrowRef.current.slickPrev()}><MdOutlineKeyboardArrowLeft/></button>
-      <button className="btn-right" onClick={() =>arrowRef.current.slickNext()}><MdOutlineKeyboardArrowRight/></button>
+      <button className="btn-left interactable" onClick={() =>arrowRef.current.slickPrev()}><MdOutlineKeyboardArrowLeft/></button>
+      <button className="btn-right interactable" onClick={() =>arrowRef.current.slickNext()}><MdOutlineKeyboardArrowRight/></button>
     </div>
   )
 }

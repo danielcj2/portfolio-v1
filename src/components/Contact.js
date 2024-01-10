@@ -13,7 +13,7 @@ const Contact = () => {
           <div className="email-fill">
             <h5>Got a question, or just want to say hello?</h5>
             <h6>CONTACT</h6>
-            <a href="mailto:danielcojocea18@gmail.com" className="align-"><IoMdMail /> danielcojocea18@gmail.com</a>
+            <a href="mailto:danielcojocea18@gmail.com" className="interactable"><IoMdMail /> danielcojocea18@gmail.com</a>
           </div>
         </div>  
         <div className="contact text-center flex-fill" id="contact">

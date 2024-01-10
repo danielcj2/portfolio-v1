@@ -27,6 +27,28 @@
   background-color: var(--scroll-thumb);
 }
 
+#cursor, #cursorCircle{
+  background-color: var(--stroke-secondary);
+  width: 10px;
+  aspect-ratio: 1;
+  position: fixed;
+  border-radius: 50%;
+  z-index: 100;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 500ms ease;
+}
+
+#cursorCircle{
+  width: 40px;
+  background-color: transparent;
+  border: solid 1px var(--stroke-secondary);
+}
+
+body:hover > #cursor, body:hover > #cursorCircle {
+  opacity: 1;
+}
+
 header{
   text-transform: uppercase;
   margin: 0 var(--indent);
@@ -859,6 +881,7 @@ p{
 
 footer{
   margin: auto;
+  margin-top: 150px;
   width: 80%;
 }
 

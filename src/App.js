@@ -26,4 +26,30 @@ function App() {
   );
 }
 
+const cursor = document.getElementById("cursor");
+const cursorCircle = document.getElementById("cursorCircle");
+
+const animateCursor = (event, interacting) => {
+  const x = event.clientX - cursor.offsetWidth / 2, 
+        y = event.clientY - cursor.offsetHeight / 2;
+
+  const mouseMove = {
+    transform : `translate(${x}px, ${y}px) scale(${interacting ? 2.5 : 1})` 
+  }
+
+  const mouseCircleMove = {
+    transform : `translate(${event.clientX - cursorCircle.offsetWidth / 2}px, ${event.clientY - cursorCircle.offsetWidth / 2}px)` 
+  }
+
+  cursor.animate(mouseMove, {duration: 1000, fill: "forwards"});
+  cursorCircle.animate(mouseCircleMove, {duration: 3000, fill: "forwards"});
+}
+
+window.onmousemove = event =>{
+  const interactable = event.target.closest(".interactable") || event.target.closest(".slick-center"),
+        interacting = interactable !== null;
+
+  animateCursor(event, interacting);
+}
+
 export default App;

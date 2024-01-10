@@ -8,7 +8,7 @@ const Introduction = () => {
         <h2>I do stuff on the internet.</h2>
         <div className="d-flex align-items-center">
             <h3>I'm a Web Developer.</h3>
-            <a className="resume-btn curtain text-center" href="/resume" target="_blank" alt="resume">Resume</a>
+            <a className="resume-btn curtain text-center interactable" href="/resume" target="_blank" alt="resume">Resume</a>
         </div>
       </div>
     </div>
