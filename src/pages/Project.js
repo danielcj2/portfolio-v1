@@ -60,14 +60,14 @@ const Project = () => {
       {(typeof(projectFound) === 'undefined') ? <NotFound /> : <><Header /><main className="project">
         <div className="section__ project-details mx-auto d-flex flex-column justify-content-end">
           <div>
-            <HashLink to="/#projects" scroll={scrollWidthOffset} className="d-flex align-items-center"><FaArrowLeftLong />Back to projects</HashLink>
+            <HashLink to="/#projects" scroll={scrollWidthOffset} className="interactable d-flex align-items-center"><FaArrowLeftLong />Back to projects</HashLink>
             <h3>Project</h3>
             <h1>{projectFound.name}</h1>
             <p>{projectFound.description}</p>
             <div className="tags d-flex">
             {projectFound.tags.map((tag, id) => (<div className="tag text-center" key={id}>{tag}</div>))}
             </div>
-            <a className="repo-link" href={projectFound.source}><FaGithub /></a>
+            <a className="repo-link interactable" href={projectFound.source}><FaGithub /></a>
           </div>
         </div>
         <div className="section__ mx-auto"></div>

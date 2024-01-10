@@ -30,11 +30,8 @@ const cursor = document.getElementById("cursor");
 const cursorCircle = document.getElementById("cursorCircle");
 
 const animateCursor = (event, interacting) => {
-  const x = event.clientX - cursor.offsetWidth / 2, 
-        y = event.clientY - cursor.offsetHeight / 2;
-
   const mouseMove = {
-    transform : `translate(${x}px, ${y}px) scale(${interacting ? 2.5 : 1})` 
+    transform : `translate(${event.clientX - cursor.offsetWidth / 2}px, ${event.clientY - cursor.offsetHeight / 2}px) scale(${interacting ? 2.5 : 1})` 
   }
 
   const mouseCircleMove = {
@@ -48,8 +45,18 @@ const animateCursor = (event, interacting) => {
 window.onmousemove = event =>{
   const interactable = event.target.closest(".interactable") || event.target.closest(".slick-center"),
         interacting = interactable !== null;
+  var mobile = false;
 
-  animateCursor(event, interacting);
+  if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i
+  .test(navigator.userAgent)) { 
+    animateCursor(event, interacting);
+  } else{
+    mobile = true;
+  }
+
+  cursor.style.display = mobile === true ? "none" : "block";
+  cursorCircle.style.display = mobile === true ? "none" : "block";
+
 }
 
 export default App;

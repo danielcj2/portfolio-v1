@@ -36,7 +36,7 @@ const Header = () => {
         </nav>
         <input type="checkbox" id="nav-btn" className="nav-btn hidden" />
         <label htmlFor="nav-btn" onClick={showNavBar}>
-            <div className="hamburger">
+            <div className="hamburger interactable">
                 <span className="bar bar1"></span>
                 <span className="bar bar2"></span>
                 <span className="bar bar3"></span>

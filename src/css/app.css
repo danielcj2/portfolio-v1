@@ -433,6 +433,7 @@ p{
   display: inline-block;
   width: calc(100% + var(--indent) * 2);
   margin: 50px calc(var(--indent) * -1);
+  box-shadow: 0 0 20px rgba(var(--bg-tertiary-rgb), 0.3);
 }
 
 .flippable-card{
@@ -486,11 +487,11 @@ p{
 }
 
 .skill{
-  margin: 1rem 1rem;
+  margin: 1rem;
   user-select: none;
 }
 
-.skill>div>svg{
+.skill svg{
   width: var(--svg-width);
   height: calc(var(--svg-width) + 3px);
   shape-rendering: geometricPrecision;
@@ -502,23 +503,23 @@ p{
   transform: scale(0.99);
 }
 
-.figma:hover path:nth-of-type(1), div:has(.figma+label:hover) .figma>path:nth-of-type(1){
+.hoverTrue:has(.figma) .figma>path:nth-of-type(1){
   fill: #1abcfe;
 }
 
-.figma:hover path:nth-of-type(2), div:has(.figma+label:hover) .figma>path:nth-of-type(2){
+.hoverTrue:has(.figma) .figma>path:nth-of-type(2){
   fill: #0ACF83;
 }
 
-.figma:hover path:nth-of-type(3), div:has(.figma+label:hover) .figma>path:nth-of-type(3){
+.hoverTrue:has(.figma) .figma>path:nth-of-type(3){
   fill: #FF7262;
 }
 
-.figma:hover path:nth-of-type(4), div:has(.figma+label:hover) .figma>path:nth-of-type(4){
+.hoverTrue:has(.figma) .figma>path:nth-of-type(4){
   fill: #F24E1E;
 }
 
-.figma:hover path:nth-of-type(5), div:has(.figma+label:hover) .figma>path:nth-of-type(5){
+.hoverTrue:has(.figma) .figma>path:nth-of-type(5){
   fill: #A258FF;
 }
 
@@ -633,7 +634,6 @@ p{
 .project-wrapper:hover>a::after{
   content: "";
   position: absolute;
-  top: 0;
   left: 0;
   width: 100%;
   height: 100%;
@@ -649,11 +649,11 @@ p{
 
 @keyframes slidein {
   from{
-    margin-top: 30%;
+    top:100%;
   }
 
   to {
-    margin-top: 0%;
+    top: 0;
   }
 }
 
@@ -719,7 +719,7 @@ p{
 
 .section:has(.contact){
   min-height: 0;
-  margin-top: 150px;
+  margin-top: 200px;
 }
 
 .section:has(.contact)>div>h2{
@@ -741,13 +741,12 @@ p{
   font-size: clamp(1rem, 2vw, 1.1rem);
   word-spacing: 0.1rem;
   margin-bottom: 50px;
-  opacity: 0.8;
 }
 
 .email-fill a, .email-fill h6{
   text-decoration: none;
   font-size: clamp(0.85rem, 2vw, 0.95rem);
-  color: var(--font-tertiary);
+  color: var(--font-primary);
   opacity: 0.8;
   margin: 0;
   transition: all 0.3s;

@@ -40,7 +40,7 @@
 
 .project h1{
   color: var(--bg-tertiary);
-  font-size: 4rem;
+  font-size: clamp(2.7rem, 8vw, 4rem);
   font-weight: 700;
   margin-left: -4px;
 }
@@ -65,7 +65,6 @@
 
 .tag{
   font-size: 0.9rem;
-  user-select: none;
   color: var(--font-primary);
   border: solid 2px var(--stroke-primary);
   border-radius: 2px;

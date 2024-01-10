@@ -14,42 +14,42 @@ const Expertise = () => {
     {
       name: 'JavaScript',
       icon: <IoLogoJavascript />,
-      styleTrue: {color: '#f0db4f'}
+      styleTrue: '#f0db4f'
     },
     {
       name: 'HTML5',
       icon: <IoLogoHtml5 />,
-      styleTrue: {color: '#e34c26'}
+      styleTrue: '#e34c26'
     },
     {
       name: 'CSS3',
       icon: <IoLogoCss3 />,
-      styleTrue: {color: '#264de4'}
+      styleTrue: '#264de4'
     },
     {
       name: 'PHP',
       icon: <SiPhp />,
-      styleTrue: {color: '#787CB5'}
+      styleTrue: '#787CB5'
     },
     {
       name: 'SQL',
       icon: <BsDatabaseFill />,
-      styleTrue: {color: '#F29111'}
+      styleTrue: '#F29111'
     },
     {
       name: 'React',
       icon: <FaReact />,
-      styleTrue: {color: '#61dafb'}
+      styleTrue: '#61dafb'
     },
     {
       name: 'Bootstrap',
       icon: <BiLogoBootstrap />,
-      styleTrue: {color: '#563d7c'}
+      styleTrue: '#563d7c'
     },
     {
       name: 'jQuery',
       icon: <SiJquery />,
-      styleTrue: {color: '#0769ad'}
+      styleTrue: '#0769ad'
     },
     {
       //"#1ABCFE"
@@ -65,12 +65,11 @@ const Expertise = () => {
         <path d="M0 8.33214C0 12.9357 3.91923 16.6679 8.75 16.6679H17.5V0H8.75C3.91923 0 0 3.73214 0 8.33214Z"/>
         <path d="M0 25.0001C0 29.6037 3.91923 33.3323 8.75 33.3323H17.5V16.668H8.75C3.91923 16.668 0 20.393 0 25.0001Z"/>
       </svg>,
-      styleTrue: {} 
     },
     {
       name: 'C#',
       icon: <SiCsharp />,
-      styleTrue: {color: '#9a4993'}
+      styleTrue: '#9a4993'
     }
   ]
   
