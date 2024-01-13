@@ -1,9 +1,9 @@
-import Framer from "./Framer";
+import MagnetFramer from "./MagnetFramer";
 
 const Icon = ({svgPath, styleTrue, iconName}) => {
     return (
       <>
-        <Framer colorTrue={styleTrue}>{svgPath}</Framer>
+        <MagnetFramer colorTrue={styleTrue}>{svgPath}</MagnetFramer>
         <label className="skill-text row justify-content-center">{iconName}</label>
       </>
       

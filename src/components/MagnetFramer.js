@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
-import { useRef, useState } from 'react'
+import { useRef, useState } from 'react';
 
-export default function Framer({children, colorTrue}) {
+export default function MagnetFramer({children, colorTrue}) {
     const ref = useRef(null);
     const [position, setPosition] = useState({x:0,y:0});
     const [isHover, setHover] = useState(false)

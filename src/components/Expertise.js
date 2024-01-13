@@ -5,6 +5,7 @@ import { FaReact } from "react-icons/fa";
 import { BsDatabaseFill } from "react-icons/bs";
 import { SiJquery, SiCsharp, SiPhp } from "react-icons/si";
 import { BiLogoBootstrap } from "react-icons/bi";
+import RevealFramer from "./RevealFramer";
 
 import Icon from "./Icon";
 
@@ -77,9 +78,9 @@ const Expertise = () => {
     <div className="section d-flex flex-column justify-content-center">
       <div className="expertise text-left" id="expertise">
         <SectionHeading head="Expertise" title="Skills & Competencies" />
-        <p>I've been doing web development for a little while now, and I'm continuously eager to learn more in this ever growing fast paced industry.</p>
+        <RevealFramer><p>I've been doing web development for a little while now, and I'm continuously eager to learn more in this ever growing fast paced industry.</p></RevealFramer>
         <div className="skills-container">
-          <p>SOME TECHNOLOGIES I'VE WORKED WITH:</p>
+          <RevealFramer><p>SOME TECHNOLOGIES I'VE WORKED WITH:</p></RevealFramer>
           <div className="skills d-flex flex-wrap ">
             {techItems.map((item, index) => (<div className="skill" key={index}><Icon svgPath={item.icon} styleTrue={item.styleTrue} iconName={item.name}/></div>))}
           </div>

@@ -7,7 +7,7 @@ import { scrollWidthOffset } from "../components/Functions";
 import { FaArrowLeftLong } from "react-icons/fa6";
 import { FaGithub } from "react-icons/fa";
 import TransitionScreen from '../components/TransitionScreen';
-import { useState, useEffect } from 'react';
+import RevealFramer from '../components/RevealFramer';
 
 import '../css/project.css';
 
@@ -48,26 +48,20 @@ const Project = () => {
   const { path } = useParams();
   var projectFound = projectList.find(p => p.path === path);
   
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    setTimeout(() => setLoading(false), 2000)
-  }, []);
-
   return (
     <>
-      {loading && <TransitionScreen />}
+      <TransitionScreen />
       {(typeof(projectFound) === 'undefined') ? <NotFound /> : <><Header /><main className="project">
         <div className="section__ project-details mx-auto d-flex flex-column justify-content-end">
           <div>
             <HashLink to="/#projects" scroll={scrollWidthOffset} className="interactable d-flex align-items-center"><FaArrowLeftLong />Back to projects</HashLink>
-            <h3>Project</h3>
-            <h1>{projectFound.name}</h1>
-            <p>{projectFound.description}</p>
-            <div className="tags d-flex">
+            <RevealFramer><h3>Project</h3></RevealFramer>
+            <RevealFramer><h1>{projectFound.name}</h1></RevealFramer>
+            <RevealFramer><p>{projectFound.description}</p></RevealFramer>
+            <RevealFramer><div className="tags d-flex">
             {projectFound.tags.map((tag, id) => (<div className="tag text-center" key={id}>{tag}</div>))}
-            </div>
-            <a className="repo-link interactable" href={projectFound.source}><FaGithub /></a>
+            </div></RevealFramer>
+            <RevealFramer><a className="repo-link interactable" href={projectFound.source}><FaGithub /></a></RevealFramer>
           </div>
         </div>
         <div className="section__ mx-auto"></div>

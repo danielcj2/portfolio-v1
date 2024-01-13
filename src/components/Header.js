@@ -12,7 +12,7 @@ const Header = () => {
   const navRef = useRef();
 
   const showNavBar = () => {
-    navRef.current.classList.toggle("responsive-nav")
+    navRef.current.classList.toggle("responsive-nav");
   }
 
   window.onscroll = function() {
