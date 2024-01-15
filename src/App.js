@@ -43,7 +43,7 @@ const animateCursor = (event, interacting) => {
 }
 
 window.onmousemove = event =>{
-  const interactable = event.target.closest(".interactable") || event.target.closest(".slick-center"),
+  const interactable = event.target.closest(".interactable") || event.target.closest(".slick-current"),
         interacting = interactable !== null;
   var mobile = false;
 

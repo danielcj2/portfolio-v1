@@ -6,6 +6,7 @@ import { BsDatabaseFill } from "react-icons/bs";
 import { SiJquery, SiCsharp, SiPhp } from "react-icons/si";
 import { BiLogoBootstrap } from "react-icons/bi";
 import RevealFramer from "./RevealFramer";
+import { motion } from "framer-motion";
 
 import Icon from "./Icon";
 
@@ -82,7 +83,24 @@ const Expertise = () => {
         <div className="skills-container">
           <RevealFramer><p>SOME TECHNOLOGIES I'VE WORKED WITH:</p></RevealFramer>
           <div className="skills d-flex flex-wrap ">
-            {techItems.map((item, index) => (<div className="skill" key={index}><Icon svgPath={item.icon} styleTrue={item.styleTrue} iconName={item.name}/></div>))}
+            {techItems.map((item, index) => (
+            <motion.div 
+              className="skill" 
+              key={index} 
+              variants={{
+                initial: { opacity: 0, y: 100},
+                animate: (index) => ({
+                  opacity: 1,
+                  y: 0,
+                  transition: { delay: (0.4 + 0.05 * index), }
+                })
+              }} 
+              initial="initial" 
+              whileInView="animate" 
+              viewport={{once: true}}
+              custom={index}>
+                <Icon svgPath={item.icon} styleTrue={item.styleTrue} iconName={item.name}/>
+            </motion.div>))}
           </div>
         </div>
       </div>

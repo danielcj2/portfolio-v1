@@ -608,7 +608,10 @@ div:has(.flippable-card){
   height: 500px;
   border: solid 0.1rem rgba(var(--border-font-tertiary-rgb), 0.3);
   border-radius: 5px;
-  transition: all 0.3s;
+}
+
+.project-wrapper:hover{
+  border: none;
 }
 
 .project-wrapper>a::before{
@@ -619,7 +622,7 @@ div:has(.flippable-card){
   width: 100%;
   height: 100%;
   background: var(--bg-tertiary);
-  opacity: 0.4;
+  opacity: 0.3;
 }
 
 .slick-center .project-wrapper>a::before{
@@ -638,43 +641,18 @@ div:has(.flippable-card){
   background: url('../svg/portfolio-title.svg');
 }
 
-.project-wrapper:hover>a::after{
-  content: "";
-  position: absolute;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-repeat: no-repeat;
-  background-size: 80%;
-  background-position: center;
-}
-
-.project-wrapper>a::after{
-  animation: slidein 1s;
-  animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
-}
-
-@keyframes slidein {
-  from{
-    top:100%;
-  }
-
-  to {
-    top: 0;
-  }
-}
-
-
 .project-wrapper>a>img{
   width: 100%;
   height: 100%;
+}
+
+.prj-cover{
   object-fit: cover;
   opacity: 1;
   transition: all 0.4s ease-out;
-  border-radius: 5px;
 }
 
-.project-wrapper:hover>a>img{
+.project-wrapper:hover .prj-cover{
   transform: scale(1.05);
 }
 
@@ -684,9 +662,8 @@ div:has(.flippable-card){
 }
 
 .center .slick-center .project-wrapper{
-  transform: scale(1.2);
+  transform: scale(1.15);
   z-index: 10;
-  transition: all 0.4s ease-in-out;
   opacity: 1;
   pointer-events: all;
 }
@@ -696,15 +673,11 @@ div:has(.flippable-card){
   pointer-events: none;
 }
 
-.slick-center:hover .project-wrapper>a>img{
+.slick-center:hover .prj-cover{
   filter: blur(2px);
 }
 
 @media (min-width: 1024px) and (max-width: 1200px) {
-  .center .slick-center .project-wrapper{
-    transform: scale(1.15);
-  }
-
   .project-wrapper{
     height: 400px;
   }
@@ -715,7 +688,7 @@ div:has(.flippable-card){
     background: none;
   }
 
-  .slick-slide:hover .project-wrapper>a>img{
+  .slick-slide:hover .prj-cover{
     filter: blur(2px);
   }
 
@@ -732,7 +705,7 @@ div:has(.flippable-card){
 .section:has(.contact) h2{
   margin: 0;
   margin-bottom: 10px;
-  font-size: clamp(1rem, 9vw, 3.3rem);
+  font-size: clamp(1rem, 9vw, 2.5rem);
   line-height: 0.9;
 }
 
