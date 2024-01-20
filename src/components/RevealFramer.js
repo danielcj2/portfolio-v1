@@ -22,7 +22,7 @@ export default function RevealFramer({children}) {
         }}
         initial="hidden"
         animate={controls}
-        transition={{duration: 0.5, delay: 0.5}}>
+        transition={{duration: 0.5, delay: 0.3}}>
         {children}
       </motion.div>
     </div>

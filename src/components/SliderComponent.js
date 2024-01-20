@@ -85,7 +85,7 @@ const SliderComponent = () => {
   return (
     <div className="slider-container mx-auto">
       <Slider ref={arrowRef} {...settings}>
-        {projectList.map((project) => (<motion.div className={"project-wrapper " + project.name} key={project.id} onHoverStart={() => setHover(project.name)} onHoverEnd={() => setHover("")}><HashLink to={project.path}><img className="prj-cover" src={project.background} alt="Project cover" />
+        {projectList.map((project) => (<motion.div className={"project-wrapper interactable " + project.name} key={project.id} onHoverStart={() => setHover(project.name)} onHoverEnd={() => setHover("")}><HashLink to={project.path}><img className="prj-cover" src={project.background} alt="Project cover" />
         <motion.img
           className="prj-hover"
           src={project.hover}
@@ -94,7 +94,7 @@ const SliderComponent = () => {
           animate={isHover === project.name ? { y: "-100%", scale: 1/1.15} : {opacity: 1} }
           transition={{type:"spring", duration: 0.75}}>    
         </motion.img></HashLink></motion.div>))}
-        {projectList.map((project) => (<motion.div className={"project-wrapper " + project.name} key={project.id} onHoverStart={() => setHover(project.name)} onHoverEnd={() => setHover("")}><HashLink to={project.path}><img className="prj-cover" src={project.background} alt="Project cover" />
+        {projectList.map((project) => (<motion.div className={"project-wrapper interactable " + project.name} key={project.id} onHoverStart={() => setHover(project.name)} onHoverEnd={() => setHover("")}><HashLink to={project.path}><img className="prj-cover" src={project.background} alt="Project cover" />
         <motion.img
           className="prj-hover"
           src={project.hover}

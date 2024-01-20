@@ -1,4 +1,5 @@
 import RevealFramer from "./RevealFramer";
+import blob from "../svg/blob-background.svg";
 
 const Introduction = () => {
   return (
@@ -14,6 +15,7 @@ const Introduction = () => {
           </div>
         </RevealFramer>
       </div>
+      <div className="space-background"><img src={blob}></img></div>
     </div>
   )
 }

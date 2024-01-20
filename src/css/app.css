@@ -193,12 +193,20 @@ header{
 .section{
   min-height: 850px;
   padding: 0 var(--indent);
-  margin-bottom: 50px;
+  margin-bottom: 100px;
   transition: padding 0.3s ease-out;
+  overflow: hidden;
 }
 
 .section:has(.intro){
   padding-top: calc(var(--indent) * 3) !important;
+}
+
+.space-background{
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1;
 }
 
 @media (min-width: 1400px){
@@ -207,8 +215,8 @@ header{
   }
 }
 
-.section>div{
-  max-width: 575px;
+.section>div:not(.space-background){
+  max-width: 600px;
   color: var(--font-primary);
 }
 
@@ -653,7 +661,7 @@ div:has(.flippable-card){
 }
 
 .project-wrapper:hover .prj-cover{
-  transform: scale(1.05);
+  transform: scale(1.1);
 }
 
 .slick-slide{
