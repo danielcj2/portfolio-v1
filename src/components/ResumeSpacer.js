@@ -1,14 +1,10 @@
-import { ReactComponent as SpacerSVG } from "../svg/layered-waves-haikei.svg"
-// import { HashLink } from "react-router-hash-link"
+import { HashLink } from "react-router-hash-link"
 
 const ResumeSpacer = () => {
   return (
     <div className="break d-flex justify-content-center align-items-center" >
-      <SpacerSVG className="spacer top-0"/>
-      {/* <div>
-        <HashLink className="resume-break d-inline-block" to="/resume#">View my resume</HashLink> 
-      </div> */}
-      <SpacerSVG className="spacer spacer-bottom"/>
+      <div className="resume-bg-img"></div>
+      <dic className="resume-break">View my full <a className="resume-link" href="/resume" target="_blank">resume</a></dic> 
     </div>
   )
 }
