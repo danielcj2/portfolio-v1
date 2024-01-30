@@ -11,7 +11,7 @@ export default function RevealFramer({children}) {
     if (isInView){
       controls.start("visible");
     }
-  }, [isInView]);
+  }, [isInView, controls]);
 
   return (
     <div ref={ref} className="animate-text">

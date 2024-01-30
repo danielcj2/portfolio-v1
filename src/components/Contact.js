@@ -6,7 +6,7 @@ import RevealFramer from './RevealFramer';
 const Contact = () => {  
   return (
     <>
-      <hr className="hr-section-break"/>
+      <hr />
       <div className="section d-flex flex-row align-items-stretch justify-content-center">
         <div className="flex-fill">
           <RevealFramer>

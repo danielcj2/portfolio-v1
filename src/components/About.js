@@ -24,6 +24,7 @@ const About = () => {
           </RevealFramer>
         </div>
       </div>
+      <hr />
     </>
   )
 }
