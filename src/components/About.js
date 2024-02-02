@@ -8,7 +8,7 @@ const About = () => {
   return (
     <>
       <div><BlobCurved className="blob-curved"/></div>
-      <div className="section d-flex flex-column justify-content-center">
+      <div className="section d-flex flex-column justify-content-center align-items-center">
         <div className="about text-left" id="about">
           <SectionHeading head="About" title="Who Am I?"/>
           <RevealFramer><p>Hello! My name is Daniel and I enjoy building clean and scalable frontend applications with exceptional user experiences. I have recently graduated from <a className="underline-slide interactable" href="https://www.trentu.ca/" target="_blank" rel="noopener noreferrer">Trent University</a> with a degree in <a className="underline-slide interactable" href="https://www.trentu.ca/durham/academics/degrees-and-programs/computer-science-bsc" target="_blank" rel="noopener noreferrer">Computer Science</a> in the Honours Program.</p></RevealFramer>

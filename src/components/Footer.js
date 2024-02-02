@@ -1,5 +1,3 @@
-import { HashLink } from "react-router-hash-link";
-import { scrollWidthOffset } from "./Functions";
 import { FaGithub, FaLinkedin,  } from "react-icons/fa";
 import { FiAtSign } from "react-icons/fi";
 

@@ -199,33 +199,25 @@ header{
   min-height: 925px;
 }
 
-.section:has(.about), .section:has(.expertise){
+.section:has(.about), .section:has(.projects){
   background-color: var(--bg-secondary);
   position: relative;
   z-index:0;
 }
 
-.section:has(.projects){
-  background-color: #080E1B;
-}
-
 .space-background{
   position: absolute;
-  top: 0;
+  top: -25px;
   right: 0;
   z-index: -100;
 }
 
-#space{
-  --parallax-speed: 5;
-}
-
 #moon{
-  --parallax-speed: 1;
+  --parallax-speed: 10;
 }
 
 #astronaut{
-  --parallax-speed: 2;
+  --parallax-speed: 4;
 }
 
 /* #astronaut:hover{
@@ -243,14 +235,17 @@ header{
 } */
 
 #satellite{
-  --parallax-speed-x: 4;
-  --parallax-speed-y: -2;
+  --parallax-speed-x: -1;
+  --parallax-speed-y: 15;
 }
 
-/* #rocket{
-  --parallax-speed-x: -3.1;
-  --parallax-speed-y: -5.2;
-} */
+#asteroid1{
+  --parallax-speed-x: -3;
+}
+
+#asteroid2{
+  --parallax-speed-x: -7;
+}
 
 #space, #astronaut, #moon{
   animation: parallax linear;
@@ -262,9 +257,20 @@ header{
   animation-timeline: scroll();
 }
 
+#asteroid1, #asteroid2{
+  animation: parallaxHorizontal linear;
+  animation-timeline: scroll();
+}
+
 @keyframes parallax{
   to {
     transform: translateY(calc(var(--parallax-speed) * 200px));
+  }
+}
+
+@keyframes parallaxHorizontal{
+  to {
+    transform: translateX(calc(var(--parallax-speed-x) * 200px));
   }
 }
 
@@ -322,12 +328,7 @@ header{
 }
 
 .divider h3{
-  color: var(--font-secondary);
-  font-weight: 400;
-  opacity: 0.5;
   margin: 0;
-  font-size: clamp(1rem, 2.5vw, 1.2rem);
-  word-spacing: 0.2rem;
 }
 
 a:not(.resume-link){
@@ -585,12 +586,7 @@ div:has(.flippable-card){
 }
 
 .resume-bg-img{
-  width: 100%;
-  height: 1200px;
-  background-size: cover;
-  background-image: url('../img/laptop-space.jpg');
-  background-repeat: no-repeat;
-  background-position: center;
+  position: absolute;
 }
 
 .resume-bg-img::before{
@@ -633,12 +629,22 @@ div:has(.flippable-card){
 }
 
 .scrollable{
-  position: absolute;
-  --parallax-speed: 3;
-  bottom: -200px;
-
+  top: 0;
   animation: parallax linear;
   animation-timeline: view();
+  animation-range: cover;
+}
+
+#astronaut_helmet{
+  --parallax-speed: 1;
+}
+
+#moon_{
+  --parallax-speed: -0.5;
+}
+
+#satellite_{
+  --parallax-speed: 0.5;
 }
 
 .projects{
