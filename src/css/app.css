@@ -206,8 +206,9 @@ header{
 }
 
 .space-background{
+  contain: paint;
   position: absolute;
-  top: -25px;
+  left: 0;
   right: 0;
   z-index: -100;
 }
@@ -239,14 +240,6 @@ header{
   --parallax-speed-y: 15;
 }
 
-#asteroid1{
-  --parallax-speed-x: -3;
-}
-
-#asteroid2{
-  --parallax-speed-x: -7;
-}
-
 #space, #astronaut, #moon{
   animation: parallax linear;
   animation-timeline: scroll();
@@ -254,11 +247,6 @@ header{
 
 #satellite, #rocket{
   animation: parallaxDiagonal linear;
-  animation-timeline: scroll();
-}
-
-#asteroid1, #asteroid2{
-  animation: parallaxHorizontal linear;
   animation-timeline: scroll();
 }
 
@@ -321,14 +309,6 @@ header{
   color: rgba(var(--bg-tertiary-rgb), 0.5) !important;
   font-size: clamp(2.5rem, 7vw, 3.5rem) !important;
   font-weight: 600 !important;
-}
-
-.divider{
-  margin-top: 75px;
-}
-
-.divider h3{
-  margin: 0;
 }
 
 a:not(.resume-link){
@@ -415,7 +395,7 @@ a:not(.resume-link){
 
 .section-title{
   color: var(--bg-tertiary);
-  font-size: clamp(1.5rem, 5vw, 2rem);
+  font-size: clamp(1.6rem, 5vw, 2rem);
   font-weight: 700;
   margin-bottom: 3rem;
 }
@@ -601,7 +581,7 @@ div:has(.flippable-card){
 }
 
 .resume-break{
-  font-size: 1.8rem;
+  font-size: clamp(1.4rem, 5vw, 1.8rem);
   font-weight: 700;
   color: var(--font-primary);
   word-spacing: 3px;
@@ -611,7 +591,7 @@ div:has(.flippable-card){
 .resume-link{
   color: var(--stroke-secondary);
   font-family: 'Life Savers', serif;
-  font-size: 2.3rem;
+  font-size: clamp(2rem, 5vw, 2.3rem);
   font-weight: 700;
   text-decoration-skip-ink: none;
   text-decoration-color: var(--btn-theme-hover);
@@ -619,7 +599,7 @@ div:has(.flippable-card){
 }
 
 .resume-link.underline-slide{
-  margin-bottom: -1.1rem;
+  margin-bottom: clamp(-1rem, 5vw, -1.1rem);
 }
 
 .resume-link.underline-slide::after{
@@ -647,17 +627,47 @@ div:has(.flippable-card){
   --parallax-speed: 0.5;
 }
 
+.section:has(.projects){
+  padding-left: 0;
+  padding-right: 0;
+}
+
 .projects{
   max-width: 100% !important;
   position: relative;
 }
 
+.projects .animate-text{
+  padding-left: 9px;
+}
+
 .slider-container{
   position: relative;
-  width: 100%;
+}
+
+@media(max-width: 1024px){
+  .section:has(.projects){
+    padding: calc(var(--indent) * 5) var(--indent);
+  }
+
+  .space-background{
+    left: -175px;
+  }
+}
+
+@media(min-width: 1024px){
+  .slider-container{
+    max-width: 950px;
+  }
 }
 
 @media(min-width: 1200px){
+  .slider-container{
+    max-width: 1100px;
+  }
+}
+
+@media(min-width: 1300px){
   .slider-container{
     max-width: 1200px;
   }
@@ -701,7 +711,7 @@ div:has(.flippable-card){
   border: none;
 }
 
-.project-wrapper>a::before{
+/* .project-wrapper>a::before{
   content: "";
   position: absolute;
   top: 0;
@@ -710,7 +720,7 @@ div:has(.flippable-card){
   height: 100%;
   background: var(--bg-tertiary);
   opacity: 0.3;
-}
+} */
 
 .slick-center .project-wrapper>a::before{
   background: none;
@@ -748,17 +758,17 @@ div:has(.flippable-card){
   margin: 4rem 0;
 }
 
-.center .slick-center .project-wrapper{
+/* .center .slick-center .project-wrapper{
   transform: scale(1.15);
   z-index: 10;
   opacity: 1;
   pointer-events: all;
-}
+} */
 
-.center .project-wrapper{
+/* .center .project-wrapper{
   opacity: 0.7;
   pointer-events: none;
-}
+} */
 
 .slick-center:hover .prj-cover{
   filter: blur(2px);
@@ -779,14 +789,14 @@ div:has(.flippable-card){
     filter: blur(2px);
   }
 
-  .center .project-wrapper{
+  /* .center .project-wrapper{
     pointer-events: all;
-  }
+  } */
 }
 
 .section:has(.contact){
   min-height: 0;
-  margin-top: 125px;
+  margin-top: 75px;
 }
 
 .section:has(.contact) h2{
@@ -1053,6 +1063,22 @@ hr {
   .send-btn{
     width: 100%;
   }
+
+  .section:has(.intro){
+    margin-top: 6rem;
+  }
+
+  .section .intro{
+    margin-top: -8rem;
+  }
+
+  .space-background{
+    left: -100px;
+  }
+
+  #message-textbox{
+    height: 5rem;
+  }
 }
 
 @media(min-width: 600px) and (max-width: 900px){
@@ -1182,6 +1208,14 @@ hr {
 
   .email-fill{
     margin-bottom: 50px;
+  }
+
+ .break{
+    height: 200px;
+  }
+
+  .resume-bg-img{
+    transform: scale(0.8);
   }
 }
 

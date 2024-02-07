@@ -14,7 +14,6 @@ const SliderComponent = () => {
   var settings = {
     dots: false,
     className: "center",
-    centerMode: true,
     infinite: true,
     speed: 500,
     slidesToShow: 3,
@@ -89,9 +88,9 @@ const SliderComponent = () => {
         <motion.img
           className="prj-hover"
           src={project.hover}
-          style={{position:"absolute", objectFit:"contain"}}
-          initial ={{ y: 0, scale: 1/1.15 }}
-          animate={isHover === project.name ? { y: "-100%", scale: 1/1.15} : {opacity: 1} }
+          style={{position:"absolute" }}
+          initial ={{ y: 0 }}
+          animate={isHover === project.name ? { y: "-100%"} : {opacity: 1} }
           transition={{type:"spring", duration: 0.75}}>    
         </motion.img></HashLink></motion.div>))}
         {projectList.map((project) => (<motion.div className={"project-wrapper interactable " + project.name} key={project.id} onHoverStart={() => setHover(project.name)} onHoverEnd={() => setHover("")}><HashLink to={project.path}><img className="prj-cover" src={project.background} alt="Project cover" />
@@ -99,8 +98,8 @@ const SliderComponent = () => {
           className="prj-hover"
           src={project.hover}
           style={{position:"absolute", objectFit:"contain"}}
-          initial ={{ y: 0, scale: 1/1.15 }}
-          animate={isHover === project.name ? { y: "-100%", scale: 1/1.15} : {opacity: 1} }
+          initial ={{ y: 0 }}
+          animate={isHover === project.name ? { y: "-100%"} : {opacity: 1} }
           transition={{type:"spring", duration: 0.75}}>    
         </motion.img></HashLink></motion.div>))}
       </Slider>

@@ -1,6 +1,10 @@
 export function scrollWidthOffset(el){ 
     const yCoordinate = el.getBoundingClientRect().top + window.scrollY;
-    const yOffset = -150; 
-    window.scrollTo({ top: yCoordinate + yOffset, behavior: 'smooth' }); 
+    var yOffset = -150; 
 
+    if(el.id === "contact"){
+        yOffset = -440;
+    }
+
+    window.scrollTo({ top: yCoordinate + yOffset, behavior: 'smooth' }); 
 }

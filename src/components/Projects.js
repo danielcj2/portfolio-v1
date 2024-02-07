@@ -5,7 +5,7 @@ const Projects = () => {
   
   return (
     <>
-      <div className="section center d-flex flex-column justify-content-center">
+      <div className="section center d-flex flex-column justify-content-center align-items-center">
         <div className="projects" id="projects">
           {/* <div className="gradient__wrapper d-flex justify-content-around">
             <div className="gradient">

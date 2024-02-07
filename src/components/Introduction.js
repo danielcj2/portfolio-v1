@@ -2,12 +2,6 @@ import RevealFramer from "./RevealFramer";
 import { ReactComponent as SpaceBackground} from "../svg/blob-background.svg";
 
 const Introduction = () => {
-  var stars = document.querySelectorAll("galaxy-star");
-  for (var i = 0; i<stars.length; i++){
-    stars[i].style.animationDelay = 1 + i/10;
-    console.log(stars[i].style.animationDelay);
-  }
-
   return (
     <div className="section d-flex flex-column justify-content-center">
       <div className="intro">
