@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/portfolio-v1/static/css/main.0ba3f0aa.css",
+    "main.js": "/portfolio-v1/static/js/main.cebb3249.js",
+    "static/media/guessdle.jpg": "/portfolio-v1/static/media/guessdle.7d71c071d0339893be12.jpg",
+    "static/media/portfolio.jpg": "/portfolio-v1/static/media/portfolio.17554f45ffeb09ffaf82.jpg",
+    "static/media/movie-ranker.jpg": "/portfolio-v1/static/media/movie-ranker.6b0603732f69a8ba7d22.jpg",
+    "static/media/resume.pdf": "/portfolio-v1/static/media/resume.53aaeecb0d13905a7dbc.pdf",
+    "static/media/guessdle-title.svg": "/portfolio-v1/static/media/guessdle-title.8514410fc21cb51d25aeed78bfc1f1da.svg",
+    "static/media/portfolio-title.svg": "/portfolio-v1/static/media/portfolio-title.bdbe0db868466472f4a4271795e041a9.svg",
+    "static/media/movie-ranker-title.svg": "/portfolio-v1/static/media/movie-ranker-title.a197fd0681db4276b3942335fc7ccdff.svg",
+    "static/media/blob-background.svg": "/portfolio-v1/static/media/blob-background.ae4d4865fcd564c985d98fcf9e054e74.svg",
+    "static/media/divider.svg": "/portfolio-v1/static/media/divider.3f84dc230311f45cf235c5184905d90e.svg",
+    "static/media/crack.svg": "/portfolio-v1/static/media/crack.de7e23b1fbb020c553e5b792910a402e.svg",
+    "index.html": "/portfolio-v1/index.html",
+    "static/media/blob-curved.svg": "/portfolio-v1/static/media/blob-curved.cf225fe302cd42cffb248ab15f75050c.svg",
+    "main.0ba3f0aa.css.map": "/portfolio-v1/static/css/main.0ba3f0aa.css.map",
+    "main.cebb3249.js.map": "/portfolio-v1/static/js/main.cebb3249.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0ba3f0aa.css",
+    "static/js/main.cebb3249.js"
+  ]
+}
