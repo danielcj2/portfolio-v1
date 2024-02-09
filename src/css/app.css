@@ -309,6 +309,15 @@ header{
   color: rgba(var(--bg-tertiary-rgb), 0.5) !important;
   font-size: clamp(2.5rem, 7vw, 3.5rem) !important;
   font-weight: 600 !important;
+  margin-left: -2px;
+}
+
+.divider{
+  margin-top: 75px;
+}
+
+.divider h3{
+  margin: 0;
 }
 
 a:not(.resume-link){

@@ -63,6 +63,11 @@
   margin-top: 2rem;
 }
 
+.tags, .repo-link{
+  margin-left: 5px;
+
+}
+
 .tag{
   font-size: 0.9rem;
   color: var(--font-primary);
