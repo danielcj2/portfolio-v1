@@ -1,7 +1,12 @@
 import RevealFramer from "./RevealFramer";
-import { ReactComponent as SpaceBackground} from "../svg/blob-background.svg";
+import { HashLink } from "react-router-hash-link";
+import { ReactComponent as SpaceBackground} from "../assets/svg/blob-background.svg";
+import { ReactComponent as SpaceBackgroundLight} from "../assets/svg/blob-background-light.svg";
+import { useTheme } from './ThemeContext';
 
 const Introduction = () => {
+  const darkTheme = useTheme();
+
   return (
     <div className="section d-flex flex-column justify-content-center">
       <div className="intro">
@@ -11,11 +16,11 @@ const Introduction = () => {
         <RevealFramer>
           <div className="d-flex align-items-center divider">
               <h3>I'm a Web Developer.</h3>
-              <a className="resume-btn curtain text-center interactable" href="/resume" target="_blank" alt="resume">Resume</a>
+              <HashLink className="resume-btn curtain text-center interactable" to="/resume" target="_blank" alt="resume">Resume</HashLink>
           </div>
         </RevealFramer>
       </div>
-      <div className="space-background"><SpaceBackground/></div>
+      <div className="space-background">{ darkTheme ? <SpaceBackground/> : <SpaceBackgroundLight />}</div>
     </div>
   )
 }

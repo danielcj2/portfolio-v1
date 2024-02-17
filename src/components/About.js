@@ -2,12 +2,16 @@ import SectionHeading from "./SectionHeading";
 import { HashLink } from "react-router-hash-link";
 import { scrollWidthOffset } from "./Functions";
 import RevealFramer from "./RevealFramer";
-import { ReactComponent as BlobCurved } from "../svg/blob-curved.svg";
+import { ReactComponent as BlobCurved } from "../assets/svg/blob-curved.svg";
+import { ReactComponent as BlobCurvedLight } from "../assets/svg/blob-curved-light.svg";
+import { useTheme } from './ThemeContext';
 
 const About = () => {
+  const darkTheme = useTheme();
+
   return (
     <>
-      <div><BlobCurved className="blob-curved"/></div>
+      <div>{ darkTheme ? <BlobCurved className="blob-curved"/> : <BlobCurvedLight className="blob-curved" />}</div>
       <div className="section d-flex flex-column justify-content-center align-items-center">
         <div className="about text-left" id="about">
           <SectionHeading head="About" title="Who Am I?"/>

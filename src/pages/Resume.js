@@ -3,7 +3,7 @@ import { FaPhoneAlt } from "react-icons/fa";
 import { IoIosMail } from "react-icons/io";
 import { FaGithub } from "react-icons/fa";
 import { MdSimCardDownload } from "react-icons/md";
-import resumePDF from "../documents/resume.pdf"
+import resumePDF from "../assets/documents/resume.pdf"
 
 const Resume = () => {
   return (

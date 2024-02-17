@@ -8,6 +8,7 @@ import { FaArrowLeftLong } from "react-icons/fa6";
 import { FaGithub } from "react-icons/fa";
 import TransitionScreen from '../components/TransitionScreen';
 import RevealFramer from '../components/RevealFramer';
+import { guessdleImgs, portfolioImgs, movieRankerImgs} from '../project-imgs.js';
 
 import '../css/project.css';
 
@@ -20,7 +21,7 @@ const Project = () => {
       path: 'guessdle',
       tags: ["React", "CSS", "Boostrap"],
       background: "a",
-      img_: ["1", "2", "3"],
+      img_: guessdleImgs,
       source: "https://github.com/danielcj2/vsidle-game",
     },
     {
@@ -30,17 +31,17 @@ const Project = () => {
       path: 'movie_ranker',
       tags: ["Javascript", "CSS", "jQuery"],
       background: "a",
-      img_: ["1", "2", "3"],
+      img_: movieRankerImgs,
       source: "https://github.com/danielcj2/movie-ranker-js"
     },
     {
       id: 3,
       name: "Portfolio",
-      description: "",
+      description: "A dynamic showcase of my skills and achievements. This project serves as a digital canvas, highlighting my expertise, passion, and diverse range of projects.",
       path: 'portfolio',
       tags: ["React", "CSS", "Bootstrap"],
       background: "a",
-      img_: ["1", "2", "3"],
+      img_: portfolioImgs,
       source: "https://github.com/danielcj2/portfolio-v1"
     }
   ]
@@ -64,7 +65,9 @@ const Project = () => {
             <RevealFramer><a className="repo-link interactable" href={projectFound.source}><FaGithub /></a></RevealFramer>
           </div>
         </div>
-        <div className="section__ mx-auto"></div>
+        <div className="section__ mx-auto">
+          {projectFound.img_.map((img, id) => (<div className="project__img" key={id}><img src={img.image} alt=""></img></div>))}
+        </div>
       </main><Footer /></>}
     </>
   )

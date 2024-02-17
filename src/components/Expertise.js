@@ -7,11 +7,17 @@ import { SiJquery, SiCsharp, SiPhp } from "react-icons/si";
 import { BiLogoBootstrap } from "react-icons/bi";
 import RevealFramer from "./RevealFramer";
 import { motion } from "framer-motion";
+import { ReactComponent as AlignmentBackground} from "../assets/svg/alignment-background.svg";
+import { ReactComponent as AlignmentBackgroundLight} from "../assets/svg/alignment-background-light.svg";
+
+import { useTheme } from './ThemeContext';
 
 import Icon from "./Icon";
 
 const Expertise = () => {
   
+  const darkTheme = useTheme();
+
   const techItems=[
     {
       name: 'JavaScript',
@@ -103,6 +109,7 @@ const Expertise = () => {
             </motion.div>))}
           </div>
         </div>
+        <div className="alignment-background">{ darkTheme ? <AlignmentBackground /> : <AlignmentBackgroundLight />}</div>
       </div>
     </div>
   )

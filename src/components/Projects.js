@@ -1,5 +1,6 @@
 import SectionHeading from "./SectionHeading";
 import SliderComponent from "./SliderComponent";
+import RevealFramer from "./RevealFramer";
 
 const Projects = () => {
   
@@ -13,6 +14,7 @@ const Projects = () => {
             </div>
           </div> */}
           <SectionHeading head="Projects" title="Some Things I've Built" />
+          <RevealFramer><p>Here's where the fun stuff happens - websites, coding adventures, and everything in between. No techy talk, just cool things I've enjoyed putting together.</p></RevealFramer>
           <SliderComponent />
         </div>
       </div>

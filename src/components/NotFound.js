@@ -2,7 +2,7 @@ import '../css/notfound.css';
 import Header from './Header';
 import Footer from './Footer';
 import { HashLink } from 'react-router-hash-link';
-import crack from '../svg/crack.svg'
+import crack from '../assets/svg/crack.svg'
 
 function NotFound() {
   return (

@@ -2,13 +2,13 @@ import Slider from "react-slick";
 import { HashLink } from "react-router-hash-link";
 import { useState, useRef } from "react";
 import { MdOutlineKeyboardArrowRight, MdOutlineKeyboardArrowLeft } from "react-icons/md";
-import guessdleImg from "../img/guessdle.jpg";
-import movie_rankerImg from "../img/movie-ranker.jpg";
-import portfolioImg from "../img/portfolio.jpg";
+import guessdleImg from "../assets/img/guessdle.jpg";
+import movie_rankerImg from "../assets/img/movie-ranker.jpg";
+import portfolioImg from "../assets/img/portfolio.jpg";
 import { motion } from "framer-motion";
-import portfolioHover from "../svg/portfolio-title.svg";
-import movieHover from "../svg/movie-ranker-title.svg";
-import guessdleHover from "../svg/guessdle-title.svg";
+import portfolioHover from "../assets/svg/portfolio-title.svg";
+import movieHover from "../assets/svg/movie-ranker-title.svg";
+import guessdleHover from "../assets/svg/guessdle-title.svg";
 
 const SliderComponent = () => {
   var settings = {

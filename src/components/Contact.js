@@ -2,8 +2,13 @@
 import Form from './Form';
 import { IoMdMail } from "react-icons/io";
 import RevealFramer from './RevealFramer';
+import { ReactComponent as ContactBackground } from "../assets/svg/corner-background.svg";
+import { ReactComponent as ContactBackgroundLight } from "../assets/svg/corner-background-light.svg";
+import { useTheme } from './ThemeContext';
 
 const Contact = () => {  
+  const darkTheme = useTheme();
+
   return (
     <>
       <hr />
@@ -25,7 +30,9 @@ const Contact = () => {
           {/* <SectionHeading head="Contact" title="Get In Touch" /> */}
           <RevealFramer><Form /></RevealFramer>
         </div>
-      </div> 
+        <div className="contact-background">{ darkTheme ? <ContactBackground/> : <ContactBackgroundLight />}</div>
+      </div>
+      <hr />
     </>
        
   )

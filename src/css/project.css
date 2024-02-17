@@ -101,6 +101,11 @@
   color: var(--font-tertiary);
 }
 
+.project__img img{
+  width: 100%;
+  height: 100%;
+}
+
 @media (min-width: 1400px){
   .project{
     padding: var(--indent);
