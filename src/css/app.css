@@ -708,7 +708,7 @@ div:has(.flippable-card){
   cursor: pointer;
   position: absolute;
   top: 45%;
-  right: -1rem;
+  right: -1.5rem;
   border: solid 0.1rem rgba(var(--border-font-tertiary-rgb), 0.4);
   border-radius: 9999px;
 }
@@ -718,7 +718,7 @@ div:has(.flippable-card){
 }
 
 .slider-container .btn-left{
-  left: -1rem;
+  left: -1.5rem;
 }
 
 .slider-container button>svg{
