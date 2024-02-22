@@ -55,7 +55,7 @@ aside svg{
 
 .resume-pdf>svg{
   background-color: var(--bg-main);
-  color: var(--font-primary);
+  color: #dbe9ee;
   width: 30px;
   height: 30px;
 }
@@ -218,8 +218,13 @@ p{
 }
 
 @media (min-width: 1200px){
+  #root:has(.resume){
+    padding-top: var(--indent);
+  }
+
   .resume{
     margin: var(--indent);
+    margin-top: 0;
   }
 }
 

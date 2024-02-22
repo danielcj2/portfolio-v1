@@ -16,7 +16,7 @@ const Introduction = () => {
         <RevealFramer>
           <div className="d-flex align-items-center divider">
               <h3>I'm a Web Developer.</h3>
-              <HashLink className="resume-btn curtain text-center interactable" to="/resume" target="_blank" rel="noopener noreferrer" alt="resume">Resume</HashLink>
+              <HashLink className="resume-btn curtain text-center interactable" to="/resume" alt="resume">Resume</HashLink>
           </div>
         </RevealFramer>
       </div>

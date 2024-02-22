@@ -6,8 +6,8 @@ import { ThemeProvider } from './components/ThemeContext';
 
 import './css/index.css'
 
-const fourofour = ReactDOM.createRoot(document.getElementById('fourofour'));
-fourofour.render(
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
   <React.StrictMode>
     <BrowserRouter>
       <ThemeProvider>
