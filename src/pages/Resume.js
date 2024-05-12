@@ -65,7 +65,7 @@ const Resume = () => {
             </div>
             <a className="project-source interactable" href="https://www.trentu.ca/" target="_blank" rel="noopener noreferrer">Trent University, Peterborough, ON</a>
             <ul className="project-contributions">
-              <li>Was part of a team of four that worked hand in hadn i nthe planning, design, development, and execution of the project presented by the client.</li>
+              <li>Was part of a team of four that worked hand in hand in the planning, design, development, and execution of the project presented by the client.</li>
               <li>Built the user interface from scratch to reflect the Trent University theme.</li>
               <li>Streamlined the process of connecting users to project entries on the web application</li>
               <li>Attended weekly meetings with the client to discuss the project scope.</li>
